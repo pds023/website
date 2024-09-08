@@ -2957,3 +2957,88 @@ blockquote {
   }
 }
 
+/* Apply CSS Grid to ensure a 3-column layout */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 5px; /* Adjust spacing between items */
+  align-items: start; /* Align items at the top */
+}
+
+.portfolio-grid figure {
+  display: flex;
+  flex-direction: column; /* Ensure items are stacked vertically */
+  justify-content: space-between; /* Distribute content evenly */
+  padding: 7px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box; /* Ensure padding doesn't break the grid */
+  min-height: 200px; /* Set a minimum height for each figure */
+  /* border: 1px solid #ddd; Border removed */
+}
+
+.portfolio-grid figure img {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-grid figure:hover img {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.portfolio-grid figure i {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  opacity: 0;
+  color: #0ba376;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: scale(1.5);
+}
+
+.portfolio-grid figure:hover i {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.portfolio-grid figure small {
+  font-size: 0.875rem;
+  margin-top: auto; /* Push the text towards the bottom */
+}
+
+
+.portfolio-item-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-item-desc h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #0ba376; /* Blue color for text */
+  transition: color 0.3s ease-in-out;
+}
+
+.portfolio-grid figure:hover h4 {
+  color: #0ba376; /* Brighter green on hover for better visibility */
+}
+
+.portfolio-item-desc small {
+  color: #888;
+  font-size: 12px;
+  transition: color 0.3s ease-in-out;
+}
+
+.portfolio-grid figure:hover small {
+  color: #fff; /* Change small text to white on hover for better contrast */
+}
