@@ -2,12 +2,41 @@
 <html lang="fr" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <title>Philippe Fontaine</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Philippe Fontaine – Data scientist & économiste</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Philippe Fontaine - Data scientist et économiste" />
+    <meta name="description" content="Philippe Fontaine, data scientist et économiste basé à Paris. Expertise en data science, évaluation de politiques publiques, lutte contre la fraude et développement d’applications Shiny." />
     <meta name="keywords" content="data science, statistiques, évaluation de politiques publiques, R, Python, Shiny, fraude, économie, CV, portfolio" />
     <meta name="author" content="PF" />
+
+    <!-- Versions linguistiques -->
+    <link rel="alternate" href="index.html" hreflang="en">
+    <link rel="alternate" href="index-fr.html" hreflang="fr">
+    <link rel="alternate" href="index.html" hreflang="x-default">
+
+    <!-- Données structurées Schema.org Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Philippe Fontaine",
+      "jobTitle": "Data scientist",
+      "url": "https://www.philippefontaine.eu/",
+      "image": "https://www.philippefontaine.eu/img/main_photo.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+      },
+      "email": "mailto:philippe.fontaine.ds@proton.me",
+      "sameAs": [
+        "https://fr.linkedin.com/in/philippe-fontaine-ds",
+        "https://github.com/pds023"
+      ]
+    }
+    </script>
+
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="css/reset.css" type="text/css">
@@ -20,25 +49,25 @@
   </head>
 
   <body>
-    <!-- Animated Background -->
+    <!-- Fond animé -->
     <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
-    <!-- /Animated Background -->
+    <!-- /Fond animé -->
 
-    <!-- Loading animation -->
-    <div class="preloader">
+    <!-- Animation de chargement -->
+    <div class="preloader" aria-hidden="true">
       <div class="preloader-animation">
         <div class="preloader-spinner"></div>
       </div>
     </div>
-    <!-- /Loading animation -->
+    <!-- /Animation de chargement -->
 
     <div class="page">
       <div class="page-content">
 
-        <header id="site_header" class="header mobile-menu-hide">
+        <header id="site_header" class="header mobile-menu-hide" role="banner">
           <div class="header-content">
             <div class="header-photo">
-              <img src="img/main_photo.jpg" alt="Philippe Fontaine">
+              <img src="img/main_photo.jpg" alt="Portrait de Philippe Fontaine" loading="eager">
             </div>
             <div class="header-titles">
               <h2>Philippe Fontaine</h2>
@@ -46,82 +75,110 @@
             </div>
           </div>
 
-          <ul class="main-menu">
-            <li class="active">
-              <a href="#home" class="nav-anim">
-                <span class="menu-icon lnr lnr-home"></span>
-                <span class="link-text">Accueil</span>
-              </a>
-            </li>
-            <li>
-              <a href="#about-me" class="nav-anim">
-                <span class="menu-icon lnr lnr-user"></span>
-                <span class="link-text">À propos</span>
-              </a>
-            </li>
-            <li>
-              <a href="#resume" class="nav-anim">
-                <span class="menu-icon lnr lnr-graduation-hat"></span>
-                <span class="link-text">Parcours</span>
-              </a>
-            </li>
-            <li>
-              <a href="#portfolio" class="nav-anim">
-                <span class="menu-icon lnr lnr-briefcase"></span>
-                <span class="link-text">Portfolio</span>
-              </a>
-            </li>
-            <li>
-              <!-- On garde #blog pour rester compatible avec le JS du template -->
-              <a href="#blog" class="nav-anim">
-                <span class="menu-icon lnr lnr-book"></span>
-                <span class="link-text">Publications</span>
-              </a>
-            </li>
-          </ul>
+          <nav aria-label="Navigation principale">
+            <ul class="main-menu">
+              <li class="active">
+                <a href="#home" class="nav-anim">
+                  <span class="menu-icon lnr lnr-home" aria-hidden="true"></span>
+                  <span class="link-text">Accueil</span>
+                </a>
+              </li>
+              <li>
+                <a href="#about-me" class="nav-anim">
+                  <span class="menu-icon lnr lnr-user" aria-hidden="true"></span>
+                  <span class="link-text">À propos</span>
+                </a>
+              </li>
+              <li>
+                <a href="#resume" class="nav-anim">
+                  <span class="menu-icon lnr lnr-graduation-hat" aria-hidden="true"></span>
+                  <span class="link-text">Parcours</span>
+                </a>
+              </li>
+              <li>
+                <a href="#portfolio" class="nav-anim">
+                  <span class="menu-icon lnr lnr-briefcase" aria-hidden="true"></span>
+                  <span class="link-text">Portfolio</span>
+                </a>
+              </li>
+              <li>
+                <!-- On garde #blog pour rester compatible avec le JS du template -->
+                <a href="#blog" class="nav-anim">
+                  <span class="menu-icon lnr lnr-book" aria-hidden="true"></span>
+                  <span class="link-text">Publications</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-          <div class="social-links">
+          <div class="social-links" aria-label="Réseaux sociaux">
             <ul>
-              <li><a href="https://fr.linkedin.com/in/philippe-fontaine-ds" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-              <li><a href="https://github.com/pds023" target="_blank"><i class="fab fa-github"></i></a></li>
-              <li><a href="mailto:philippe.fontaine.ds@proton.me" target="_blank"><i class="far fa-envelope"></i></a></li>
+              <li>
+                <a href="https://fr.linkedin.com/in/philippe-fontaine-ds"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/pds023"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="GitHub">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:philippe.fontaine.ds@proton.me"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="E-mail">
+                  <i class="far fa-envelope" aria-hidden="true"></i>
+                </a>
+              </li>
             </ul>
           </div>
 
           <div class="header-buttons">
             <a href="index.html" class="btn btn-secondary">EN</a>
-            <a href="img/resume/cv_public_fr.pdf" target="_blank" class="btn btn-primary" download>Télécharger le CV</a>            
+            <a href="img/resume/cv_public_fr.pdf"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-primary" download>
+              Télécharger le CV
+            </a>
           </div>
 
-          <div class="copyrights">© 2024 Tous droits réservés.</div>
+          <div class="copyrights">© 2025 Tous droits réservés.</div>
         </header>
 
-        <!-- Mobile Navigation -->
-        <div class="menu-toggle">
+        <!-- Navigation mobile -->
+        <div class="menu-toggle"
+             role="button"
+             aria-label="Basculer la navigation"
+             aria-expanded="false"
+             tabindex="0">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <!-- End Mobile Navigation -->
+        <!-- Fin navigation mobile -->
 
-        <!-- Arrows Nav -->
-        <div class="lmpixels-arrows-nav">
+        <!-- Flèches de navigation -->
+        <div class="lmpixels-arrows-nav" aria-hidden="true">
           <div class="lmpixels-arrow-right"><i class="lnr lnr-chevron-right"></i></div>
           <div class="lmpixels-arrow-left"><i class="lnr lnr-chevron-left"></i></div>
         </div>
-        <!-- End Arrows Nav -->
+        <!-- Fin flèches de navigation -->
 
-        <div class="content-area">
+        <main class="content-area" role="main">
           <div class="animated-sections">
 
-            <!-- Home Subpage -->
-            <section data-id="home" class="animated-section start-page">
+            <!-- Accueil -->
+            <section data-id="home" class="animated-section start-page" aria-labelledby="home-title">
               <div class="section-content vcentered">
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="title-block">
-                      <h2>Philippe Fontaine</h2>
-                      <div class="owl-carousel text-rotation">
+                      <h1 id="home-title">Philippe Fontaine</h1>
+                      <div class="owl-carousel text-rotation" aria-label="Rôles">
                         <div class="item">
                           <div class="sp-subtitle">Data scientist</div>
                         </div>
@@ -137,16 +194,16 @@
                 </div>
               </div>
             </section>
-            <!-- End of Home Subpage -->
+            <!-- Fin Accueil -->
 
-            <!-- About Me Subpage -->
-            <section data-id="about-me" class="animated-section">
+            <!-- À propos -->
+            <section data-id="about-me" class="animated-section" aria-labelledby="about-title">
               <div class="section-content">
                 <div class="page-title">
-                  <h2>À propos de <span>moi</span></h2>
+                  <h2 id="about-title">À propos de <span>moi</span></h2>
                 </div>
 
-                <!-- Personal Information -->
+                <!-- Informations personnelles -->
                 <div class="row">
                   <div class="col-xs-12 col-sm-7">
                     <p>
@@ -189,7 +246,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- End of Personal Information -->
+                <!-- Fin informations personnelles -->
 
                 <div class="white-space-50"></div>
 
@@ -208,7 +265,7 @@
                       <div class="info-list-w-icon">
                         <div class="info-block-w-icon">
                           <div class="ci-icon">
-                            <i class="lnr lnr-laptop"></i>
+                            <i class="lnr lnr-laptop" aria-hidden="true"></i>
                           </div>
                           <div class="ci-text">
                             <h4>Développement Shiny</h4>
@@ -222,7 +279,7 @@
                         </div>
                         <div class="info-block-w-icon">
                           <div class="ci-icon">
-                            <i class="lnr lnr-database"></i>
+                            <i class="lnr lnr-database" aria-hidden="true"></i>
                           </div>
                           <div class="ci-text">
                             <h4>Data science</h4>
@@ -243,7 +300,7 @@
                       <div class="info-list-w-icon">
                         <div class="info-block-w-icon">
                           <div class="ci-icon">
-                            <i class="lnr lnr-pencil"></i>
+                            <i class="lnr lnr-pencil" aria-hidden="true"></i>
                           </div>
                           <div class="ci-text">
                             <h4>Rédaction</h4>
@@ -257,7 +314,7 @@
                         </div>
                         <div class="info-block-w-icon">
                           <div class="ci-icon">
-                            <i class="lnr lnr-pie-chart"></i>
+                            <i class="lnr lnr-pie-chart" aria-hidden="true"></i>
                           </div>
                           <div class="ci-text">
                             <h4>Économie</h4>
@@ -272,17 +329,17 @@
                     </div>
                   </div>
                 </div>
-                <!-- End of Services -->
+                <!-- Fin services -->
 
               </div>
             </section>
-            <!-- End of About Me Subpage -->
+            <!-- Fin À propos -->
 
-            <!-- Resume Subpage -->
-            <section data-id="resume" class="animated-section">
+            <!-- Parcours -->
+            <section data-id="resume" class="animated-section" aria-labelledby="resume-title">
               <div class="section-content">
                 <div class="page-title">
-                  <h2>Parcours</h2>
+                  <h2 id="resume-title">Parcours</h2>
                 </div>
 
                 <div class="row">
@@ -292,7 +349,7 @@
                       <h3>Expériences</h3>
                     </div>
 
-                    <div class="timeline timeline-second-style clearfix">
+                    <div class="timeline timeline-second-style clearfix" aria-label="Expériences professionnelles">
                       <div class="timeline-item clearfix">
                         <div class="left-part">
                           <h5 class="item-period">2025 - Présent</h5>
@@ -370,7 +427,7 @@
                       <h3>Formation</h3>
                     </div>
                     
-                    <div class="timeline timeline-second-style clearfix">
+                    <div class="timeline timeline-second-style clearfix" aria-label="Formation">
                       <div class="timeline-item clearfix">
                         <div class="left-part">
                           <h5 class="item-period">2019</h5>
@@ -419,14 +476,14 @@
 
                   </div>
 
-                  <!-- Skills & Certificates -->
+                  <!-- Compétences & Certifications -->
                   <div class="col-xs-12 col-sm-5">
-                    <!-- Computer Science Skills -->
+                    <!-- Compétences informatiques -->
                     <div class="block-title">
                       <h3>Compétences <span>informatiques</span></h3>
                     </div>
 
-                    <div class="skills-info skills-second-style">
+                    <div class="skills-info skills-second-style" aria-label="Compétences informatiques">
                       <div class="skill clearfix">
                         <h4>R</h4>
                         <div class="skill-value">80%</div>
@@ -486,12 +543,12 @@
 
                     <div class="white-space-10"></div>
 
-                    <!-- Other Skills -->
+                    <!-- Autres compétences -->
                     <div class="block-title">
                       <h3>Autres <span>compétences</span></h3>
                     </div>
 
-                    <div class="skills-info skills-second-style">
+                    <div class="skills-info skills-second-style" aria-label="Autres compétences">
                       <div class="skill clearfix">
                         <h4>Lutte contre la fraude</h4>
                         <div class="skill-value">75%</div>
@@ -543,7 +600,7 @@
 
                     <div class="white-space-10"></div>
 
-                    <!-- Knowledges -->
+                    <!-- Savoir-être -->
                     <div class="block-title">
                       <h3>Savoir-être</h3>
                     </div>
@@ -562,12 +619,12 @@
                       <li>Pensée adversariale</li>
                     </ul>
                   </div>
-                  <!-- End of Skills & Certificates -->
+                  <!-- Fin Compétences & Certifications -->
                 </div>
 
                 <div class="white-space-50"></div>
 
-                <!-- Certificates -->
+                <!-- Certifications -->
                 <div class="row">
                   <div class="col-xs-12 col-sm-12">
                     <div class="block-title">
@@ -577,11 +634,11 @@
                 </div>
                 
                 <div class="row">
-                  <!-- Certificate 1 -->
+                  <!-- Certification 1 -->
                   <div class="col-xs-12 col-sm-6">
                     <div class="certificate-item clearfix">
                       <div class="certi-logo">
-                        <img src="img/resume/google_logo.png" alt="logo">
+                        <img src="img/resume/google_logo.png" alt="Logo Google" loading="lazy">
                       </div>
                       <div class="certi-content">
                         <div class="certi-title">
@@ -599,13 +656,13 @@
                       </div>
                     </div>
                   </div>
-                  <!-- End of Certificate 1 -->
+                  <!-- Fin Certification 1 -->
 
-                  <!-- Certificate 2 -->
+                  <!-- Certification 2 -->
                   <div class="col-xs-12 col-sm-6">
                     <div class="certificate-item clearfix">
                       <div class="certi-logo">
-                        <img src="img/resume/google_logo.png" alt="logo">
+                        <img src="img/resume/google_logo.png" alt="Logo Google" loading="lazy">
                       </div>
                       <div class="certi-content">
                         <div class="certi-title">
@@ -623,21 +680,21 @@
                       </div>
                     </div>
                   </div>
-                  <!-- End of Certificate 2 -->
+                  <!-- Fin Certification 2 -->
                 </div>
-                <!-- End of Certificates -->
+                <!-- Fin Certifications -->
 
               </div>
             </section>
-            <!-- End of Resume Subpage -->
+            <!-- Fin Parcours -->
 
-            <!-- Portfolio Subpage -->
-            <section data-id="portfolio" class="animated-section">
+            <!-- Portfolio -->
+            <section data-id="portfolio" class="animated-section" aria-labelledby="portfolio-title">
               <div class="section-content">
                 <div class="page-title">
-                  <h2>Portfolio</h2>
+                  <h2 id="portfolio-title">Portfolio</h2>
                 </div>
-                <div class="portfolio-filters">
+                <div class="portfolio-filters" aria-label="Filtres du portfolio">
                   <ul>
                     <li class="active"><a href="#" data-filter="*">Tous</a></li>
                     <li><a href="#" data-filter=".shiny-app">Applications Shiny</a></li>
@@ -648,8 +705,11 @@
                 <div class="portfolio-grid">
                   <!-- Shiny App 1 -->
                   <figure class="shiny-app">
-                    <a href="https://l023aq.shinyapps.io/thesesfr/" target="_blank" rel="noopener noreferrer" class="portfolio-item-img">
-                      <i class="fas fa-external-link-alt"></i>
+                    <a href="https://l023aq.shinyapps.io/thesesfr/"
+                       target="_blank" rel="noopener noreferrer"
+                       class="portfolio-item-img"
+                       aria-label="Ouvrir l'application ThesisR">
+                      <i class="fas fa-external-link-alt" aria-hidden="true"></i>
                     </a>
                     <figcaption class="portfolio-item-desc">
                       <h4>ThesisR</h4>
@@ -663,8 +723,11 @@
                   
                   <!-- Shiny App 2 -->
                   <figure class="shiny-app">
-                    <a href="https://l023aq.shinyapps.io/minintCIR/" target="_blank" rel="noopener noreferrer" class="portfolio-item-img">
-                      <i class="fas fa-external-link-alt"></i>
+                    <a href="https://l023aq.shinyapps.io/minintCIR/"
+                       target="_blank" rel="noopener noreferrer"
+                       class="portfolio-item-img"
+                       aria-label="Ouvrir l'application CIR">
+                      <i class="fas fa-external-link-alt" aria-hidden="true"></i>
                     </a>
                     <figcaption class="portfolio-item-desc">
                       <h4>CIR</h4>
@@ -676,8 +739,11 @@
             
                   <!-- Shiny App 3 -->
                   <figure class="shiny-app">
-                    <a href="https://l023aq.shinyapps.io/shinySignalConso/" target="_blank" rel="noopener noreferrer" class="portfolio-item-img">
-                      <i class="fas fa-external-link-alt"></i>
+                    <a href="https://l023aq.shinyapps.io/shinySignalConso/"
+                       target="_blank" rel="noopener noreferrer"
+                       class="portfolio-item-img"
+                       aria-label="Ouvrir l'application Explorateur de signalements">
+                      <i class="fas fa-external-link-alt" aria-hidden="true"></i>
                     </a>
                     <figcaption class="portfolio-item-desc">
                       <h4>Explorateur de signalements</h4>
@@ -689,8 +755,10 @@
                 
                   <!-- Shiny App 4 -->
                   <figure class="shiny-app">
-                    <a href="#" class="portfolio-item-img">
-                      <i class="fas fa-external-link-alt"></i>
+                    <a href="#"
+                       class="portfolio-item-img"
+                       aria-label="VulnGovTracker (accès sur demande)">
+                      <i class="fas fa-external-link-alt" aria-hidden="true"></i>
                     </a>
                     <figcaption class="portfolio-item-desc">
                       <h4>VulnGovTracker</h4>
@@ -703,13 +771,13 @@
                 </div>
               </div>
             </section>
-            <!-- End of Portfolio Subpage -->
+            <!-- Fin Portfolio -->
 
-            <!-- Publications Subpage (ancienne "Blog") -->
-            <section data-id="blog" class="animated-section">
+            <!-- Publications -->
+            <section data-id="blog" class="animated-section" aria-labelledby="publications-title">
               <div class="section-content">
                 <div class="page-title">
-                  <h2>Publications</h2>
+                  <h2 id="publications-title">Publications</h2>
                 </div>
 
                 <div class="row">
@@ -720,49 +788,57 @@
                     <ul class="publications-list">
                       <li>
                         <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2025/r25-002-notice.html" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.senat.fr/notice-rapport/2025/r25-002-notice.html"
+                           target="_blank" rel="noopener noreferrer">
                           Surcoûts de construction liés aux normes
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2025/r25-002-notice.html" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.senat.fr/notice-rapport/2025/r25-002-notice.html"
+                           target="_blank" rel="noopener noreferrer">
                           L’exécution de la peine : 20 propositions pour mieux exécuter et donner du sens aux sanctions pénales
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2024/r24-808-1-notice.html" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.senat.fr/notice-rapport/2024/r24-808-1-notice.html"
+                           target="_blank" rel="noopener noreferrer">
                           Transparence et évaluation des aides publiques aux entreprises : une attente démocratique, un gage d’efficacité économique
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2024/r24-814-notice.html" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.senat.fr/notice-rapport/2024/r24-814-notice.html"
+                           target="_blank" rel="noopener noreferrer">
                           Évolution du financement de la lutte contre les violences faites aux femmes
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2024/r24-787-notice.html" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.senat.fr/notice-rapport/2024/r24-787-notice.html"
+                           target="_blank" rel="noopener noreferrer">
                           Santé mentale et psychiatrie : pas de « grande cause » sans grands moyens
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2024/r24-671-notice.html" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.senat.fr/notice-rapport/2024/r24-671-notice.html"
+                           target="_blank" rel="noopener noreferrer">
                           25 propositions pour donner aux polices municipales les moyens de lutter contre l’insécurité du quotidien
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2024/r24-616-notice.html" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.senat.fr/notice-rapport/2024/r24-616-notice.html"
+                           target="_blank" rel="noopener noreferrer">
                           L’emploi des seniors : une clé pour sauver la répartition ?
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2024/r24-514-notice.html" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.senat.fr/notice-rapport/2024/r24-514-notice.html"
+                           target="_blank" rel="noopener noreferrer">
                           La lutte contre la vie chère outre-mer : pansements ou vrais remèdes ?
                         </a>
                       </li>
@@ -776,49 +852,57 @@
                     <ul class="publications-list">
                       <li>
                         <span class="pub-year">2024</span>
-                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports de mission/2024/Revue de dépenses Dispositif affections de longue durée -.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports%20de%20mission/2024/Revue%20de%20d%C3%A9penses%20Dispositif%20affections%20de%20longue%20dur%C3%A9e%20-.pdf"
+                           target="_blank" rel="noopener noreferrer">
                           Revue de dépenses relative aux affections de longue durée – Pour un dispositif plus efficient et équitable
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2023</span>
-                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports de mission/2023/Rapport_CVAE_Version Internet" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports%20de%20mission/2023/Rapport_CVAE_Version%20Internet"
+                           target="_blank" rel="noopener noreferrer">
                           Territorialisation de la compensation de la cotisation sur la valeur ajoutée des entreprises (CVAE)
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2023</span>
-                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports de mission/2024/Rapport_methodo_intervention_publique_Version Web.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports%20de%20mission/2024/Rapport_methodo_intervention_publique_Version%20Web.pdf"
+                           target="_blank" rel="noopener noreferrer">
                           Mission transversale de méthode sur les domaines d’intervention de l’État et les outils d’intervention publique
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2022</span>
-                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports de mission/2022/Rapport_scolarisation_eleves_situation_handicap.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports%20de%20mission/2022/Rapport_scolarisation_eleves_situation_handicap.pdf"
+                           target="_blank" rel="noopener noreferrer">
                           Scolarisation des élèves en situation de handicap
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2022</span>
-                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports de mission/2022/2022-M-012-06_Rapport_definitif_ORPEA.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports%20de%20mission/2022/2022-M-012-06_Rapport_definitif_ORPEA.pdf"
+                           target="_blank" rel="noopener noreferrer">
                           Mission sur la gestion des établissements d’hébergement de personnes âgées dépendantes (EHPAD) du groupe Orpea
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2021</span>
-                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports de mission/2021/FS-oct-2021-RAPPORT-COEURE-RELANCE.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports%20de%20mission/2021/FS-oct-2021-RAPPORT-COEURE-RELANCE.pdf"
+                           target="_blank" rel="noopener noreferrer">
                           Comité d’évaluation du plan France Relance
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2021</span>
-                        <a href="https://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/fs-2021-rapport-isf-14octobre-10h-couv-final.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/fs-2021-rapport-isf-14octobre-10h-couv-final.pdf"
+                           target="_blank" rel="noopener noreferrer">
                           Comité d’évaluation des réformes de la fiscalité du capital
                         </a>
                       </li>
                       <li>
                         <span class="pub-year">2020</span>
-                        <a href="https://www.ccomptes.fr/system/files/2020-10/20201014-rapport-particulier4-CPO-fiscalite-entreprises.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.ccomptes.fr/system/files/2020-10/20201014-rapport-particulier4-CPO-fiscalite-entreprises.pdf"
+                           target="_blank" rel="noopener noreferrer">
                           Les nouvelles règles de la fiscalité internationale des entreprises : évaluation des effets économiques pour la France
                         </a>
                       </li>
@@ -828,10 +912,10 @@
 
               </div>
             </section>
-            <!-- End of Publications Subpage -->
+            <!-- Fin Publications -->
 
           </div>
-        </div>
+        </main>
 
       </div>
     </div>
@@ -841,16 +925,14 @@
     <script src="js/animating.js"></script>
 
     <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
 
-    <script src='js/perfect-scrollbar.min.js'></script>
-    <script src='js/jquery.shuffle.min.js'></script>
-    <script src='js/masonry.pkgd.min.js'></script>
-    <script src='js/owl.carousel.min.js'></script>
+    <script src="js/perfect-scrollbar.min.js"></script>
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
 
     <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
-

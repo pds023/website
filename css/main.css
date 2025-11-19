@@ -3042,3 +3042,221 @@ blockquote {
 .portfolio-grid figure:hover small {
   color: #fff; /* Change small text to white on hover for better contrast */
 }
+
+/* ============================================================
+   PF 2025 – Améliorations UX / accessibilité / portfolio
+   (à placer tout en bas de main.css)
+   ============================================================ */
+
+/* 1. Lisibilité générale */
+.section-content p {
+  max-width: 70ch;
+  margin-bottom: 12px;
+}
+
+/* 2. États de focus (accessibilité clavier) */
+:focus-visible {
+  outline: 2px solid #0ba376;
+  outline-offset: 3px;
+}
+
+.menu-toggle:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.main-menu a:focus-visible,
+.header-buttons .btn-primary:focus-visible,
+.header-buttons .btn-secondary:focus-visible,
+.portfolio-grid figure a:focus-visible {
+  outline: 2px solid #0ba376;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* 3. Réduction des animations pour prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .preloader-spinner {
+    animation: none !important;
+  }
+}
+
+/* 4. Publications : mise en page plus claire */
+.publications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.publications-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.publications-list .pub-year {
+  flex-shrink: 0;
+  min-width: 3.3rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #0ba376;
+  opacity: 0.9;
+}
+
+.publications-list a {
+  color: #d5d5d5;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.publications-list a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* 5. Portfolio en CSS Grid robuste + responsive
+   (on neutralise les anciens width/float avec ces overrides) */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.portfolio-grid figure {
+  float: none !important;
+  width: auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-sizing: border-box;
+  min-height: 200px;
+  background-color: #333;
+  border-radius: 10px;
+  border: 1px solid #444;
+}
+
+.portfolio-grid figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 22px rgba(0, 0, 0, 0.35);
+}
+
+.portfolio-item-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.portfolio-item-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(11, 163, 118, 0.35), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-grid figure:hover .portfolio-item-img::after {
+  opacity: 1;
+}
+
+.portfolio-item-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.portfolio-grid figure:hover .portfolio-item-img img {
+  transform: scale(1.06);
+  opacity: 0.9;
+}
+
+/* Icône de lien externe */
+.portfolio-grid figure i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  opacity: 0;
+  color: #0ba376;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: scale(1.4);
+}
+
+.portfolio-grid figure:hover i {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.portfolio-item-desc {
+  margin-top: 12px;
+}
+
+.portfolio-item-desc h4 {
+  margin-top: 4px;
+  font-size: 17px;
+  color: #f5f5f5;
+  transition: color 0.3s ease-in-out;
+}
+
+.portfolio-grid figure:hover h4 {
+  color: #0be29a;
+}
+
+.portfolio-item-desc small {
+  display: block;
+  color: #aaaaaa;
+  font-size: 12px;
+  margin-top: 4px;
+  transition: color 0.3s ease-in-out;
+}
+
+.portfolio-grid figure:hover small {
+  color: #ffffff;
+}
+
+/* 6. Adaptation mobile fine (complément à tes media queries) */
+@media only screen and (max-width: 768px) {
+  .section-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .title-block h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .title-block .sp-subtitle {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .section-content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .title-block h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
