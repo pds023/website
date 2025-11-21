@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Page d'accueil (EN par défaut) -->
+  <url>
+    <loc>https://www.philippefontaine.eu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.philippefontaine.eu/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.philippefontaine.eu/index-fr.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.philippefontaine.eu/index.html" />
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Version EN explicite -->
+  <url>
+    <loc>https://www.philippefontaine.eu/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.philippefontaine.eu/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.philippefontaine.eu/index-fr.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.philippefontaine.eu/index.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Version FR -->
+  <url>
+    <loc>https://www.philippefontaine.eu/index-fr.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.philippefontaine.eu/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.philippefontaine.eu/index-fr.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.philippefontaine.eu/index.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- CV EN -->
+  <url>
+    <loc>https://www.philippefontaine.eu/img/resume/cv_public.pdf</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- CV FR -->
+  <url>
+    <loc>https://www.philippefontaine.eu/img/resume/cv_public_fr.pdf</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>
