@@ -1,14 +1,13 @@
 /*
-* Template Name: BreezyCV - Resume / CV / vCard / Portfolio Template
-* Author: LMPixels
-* Author URL: http://themeforest.net/user/lmpixels
-* Version: 1.6.0 (modifié PF 2025)
+* Template Name: BreezyCV - Refactored for Senior Data Scientist Profile
+* Author: LMPixels (Modified by PF)
+* Version: 2.0 (Cleaned, No-Bloat)
 */
 
 (function($) {
 "use strict";
 
-    // Portfolio subpage filters (version sans shuffle.js, basée sur data-filter et classes)
+    // Portfolio Filters (Compatible avec CSS Grid)
     function portfolio_init() {
         var $portfolio_grid   = $('.portfolio-grid');
         var $portfolio_filter = $('.portfolio-filters');
@@ -17,7 +16,7 @@
             return;
         }
 
-        // Accessibilité : les filtres sont des boutons
+        // Accessibilité
         $portfolio_filter.find('a').attr('role', 'button').attr('aria-pressed', 'false');
         $portfolio_filter.find('li.active a').attr('aria-pressed', 'true');
 
@@ -28,25 +27,24 @@
             var filter = $this.data('filter');
             var $items = $portfolio_grid.find('figure');
 
-            // Visuel : état actif
+            // Gestion visuelle des boutons
             $this.parent().addClass('active').siblings().removeClass('active');
-
-            // Accessibilité ARIA
+            
+            // Mise à jour ARIA
             $portfolio_filter.find('a').attr('aria-pressed', 'false');
             $this.attr('aria-pressed', 'true');
 
-            // Filtrage par classe
+            // Filtrage simple (Le CSS Grid s'adapte automatiquement quand on cache des éléments)
             if (!filter || filter === '*') {
-                $items.show();
+                $items.fadeIn(300);
             } else {
-                $items.hide().filter(filter).show();
+                $items.hide(); 
+                $items.filter(filter).fadeIn(300);
             }
         });
     }
-    // /Portfolio subpage filters
 
-
-    // Hide Mobile menu
+    // Gestion du Menu Mobile
     function mobileMenuHide() {
         var windowWidth = $(window).width(),
             $siteHeader = $('#site_header'),
@@ -60,14 +58,12 @@
                 $siteHeader.addClass('animate');
             }, 500);
         } else {
-            // Sur desktop, on s’assure que le header est visible
             $siteHeader.removeClass('animate mobile-menu-hide');
             $menuToggle.removeClass('open').attr('aria-expanded', 'false');
         }
     }
-    // /Hide Mobile menu
 
-    // Custom scroll
+    // Custom Scrollbar (Conservation du style du template)
     function customScroll() {
         var windowWidth = $(window).width();
         if (windowWidth > 1024) {
@@ -80,77 +76,42 @@
             });
         }
     }
-    // /Custom scroll
 
-    // Contact form validator
-    $(function () {
+    // --- Events --- //
 
-        $('#contact_form').validator();
+    // Window Load
+    $(window).on('load', function() {
+        // Disparition du loader
+        $(".preloader").fadeOut(800, "linear");
 
-        $('#contact_form').on('submit', function (e) {
-            if (!e.isDefaultPrevented()) {
-                var url = "contact_form/contact_form.php";
-
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    data: $(this).serialize(),
-                    success: function (data)
-                    {
-                        var messageAlert = 'alert-' + data.type;
-                        var messageText = data.message;
-
-                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable">' +
-                                       '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
-                                       messageText +
-                                       '</div>';
-                        if (messageAlert && messageText) {
-                            $('#contact_form').find('.messages').html(alertBox);
-                            $('#contact_form')[0].reset();
-                        }
-                    }
-                });
-                return false;
-            }
-        });
-    });
-    // /Contact form validator
-
-    //On Window load & Resize
-    $(window)
-        .on('load', function() { //Load
-            // Animation on Page Loading
-            $(".preloader").fadeOut(800, "linear");
-
-            // initializing page transition.
-            var ptPage = $('.animated-sections');
-            if (ptPage[0]) {
-                PageTransitions.init({
-                    menu: 'ul.main-menu'
-                });
-            }
-
-            // S'assure que le header et les scrollbars sont cohérents avec la taille
-            mobileMenuHide();
-            customScroll();
-        })
-        .on('resize', function() { //Resize
-            mobileMenuHide();
-            $('.animated-section').each(function() {
-                $(this).perfectScrollbar('update');
+        // Initialisation des transitions de page (via animating.js)
+        var ptPage = $('.animated-sections');
+        if (ptPage[0] && typeof PageTransitions !== 'undefined') {
+            PageTransitions.init({
+                menu: 'ul.main-menu'
             });
-            customScroll();
+        }
+
+        mobileMenuHide();
+        customScroll();
+    })
+    .on('resize', function() {
+        mobileMenuHide();
+        $('.animated-section').each(function() {
+            $(this).perfectScrollbar('update');
         });
+        customScroll();
+    });
 
 
-    // On Document Load
+    // Document Ready
     $(document).ready(function () {
-        var prefersReducedMotion = window.matchMedia &&
-                                   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        
+        // Effet Parallaxe sur le fond (Désactivé si l'utilisateur demande "reduced motion")
+        var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        // Background parallax (désactivé si prefers-reduced-motion)
-        if (!prefersReducedMotion) {
-            var movementStrength = 23;
+        if (!prefersReducedMotion && $('.lm-animated-bg').length) {
+            var movementStrength = 20;
             var height = movementStrength / $(document).height();
             var width  = movementStrength / $(document).width();
 
@@ -158,60 +119,41 @@
                 var pageX = e.pageX - ($(document).width() / 2),
                     pageY = e.pageY - ($(document).height() / 2),
                     newvalueX = width * pageX * -1,
-                    newvalueY = height * pageY * -1,
-                    $elements = $('.lm-animated-bg');
+                    newvalueY = height * pageY * -1;
 
-                $elements.addClass('transition');
-                $elements.css({
+                $('.lm-animated-bg').css({
                     "background-position": "calc( 50% + " + newvalueX + "px ) calc( 50% + " + newvalueY + "px )"
                 });
-
-                setTimeout(function() {
-                    $elements.removeClass('transition');
-                }, 300);
             });
         }
 
-        // Mobile menu
+        // Toggle du Menu Mobile
         $('.menu-toggle').on("click", function () {
             var $toggle     = $(this);
             var $siteHeader = $('#site_header');
-
-            var wasHidden   = $siteHeader.hasClass('mobile-menu-hide');
-            var willBeShown = wasHidden; // on bascule
+            var isHidden    = $siteHeader.hasClass('mobile-menu-hide');
 
             $siteHeader.addClass('animate');
             $siteHeader.toggleClass('mobile-menu-hide');
             $toggle.toggleClass('open');
-
-            $toggle.attr('aria-expanded', willBeShown ? 'true' : 'false');
+            $toggle.attr('aria-expanded', isHidden ? 'true' : 'false');
         });
 
-        // Mobile menu hide on main menu item click
+        // Fermer le menu mobile au clic sur un lien
         $('.main-menu').on("click", "a", function () {
             mobileMenuHide();
         });
 
-        // Sidebar toggle
-        $('.sidebar-toggle').on("click", function () {
-            $('#blog-sidebar').toggleClass('open');
-        });
-
-        // Initialize Portfolio grid (plus de shuffle, simple filtrage)
+        // Initialisation du Portfolio
         var $portfolio_container = $(".portfolio-grid");
         $portfolio_container.imagesLoaded(function () {
             portfolio_init();
         });
 
-        // Blog grid init
-        var $container = $(".blog-masonry");
-        $container.imagesLoaded(function(){
-            $container.masonry();
-        });
-
+        // Scrollbar
         customScroll();
 
-        // Text rotation (adapté à prefers-reduced-motion)
+        // Rotation du texte (Home page)
         $('.text-rotation').owlCarousel({
             loop: true,
             dots: false,
@@ -225,58 +167,7 @@
             animateIn: 'animated-section-scaleUp'
         });
 
-        // Testimonials Slider
-        $(".testimonials.owl-carousel").owlCarousel({
-            nav: true, // Show next/prev buttons.
-            items: 3, // The number of items you want to see on the screen.
-            loop: false, // Infinity loop. Duplicate last and first items to get loop illusion.
-            navText: false,
-            autoHeight: true,
-            margin: 25,
-            responsive : {
-                // breakpoint from 0 up
-                0 : {
-                    items: 1
-                },
-                // breakpoint from 480 up
-                480 : {
-                    items: 1
-                },
-                // breakpoint from 768 up
-                768 : {
-                    items: 2
-                },
-                1200 : {
-                    items: 2
-                }
-            }
-        });
-
-        // Clients Slider
-        $(".clients.owl-carousel").imagesLoaded().owlCarousel({
-            nav: true, // Show next/prev buttons.
-            items: 2, // The number of items you want to see on the screen.
-            loop: false, // Infinity loop. Duplicate last and first items to get loop illusion.
-            navText: false,
-            margin: 10,
-            autoHeight: true,
-            responsive : {
-                // breakpoint from 0 up
-                0 : {
-                    items: 2
-                },
-                // breakpoint from 768 up
-                768 : {
-                    items: 4
-                },
-                1200 : {
-                    items: 5
-                }
-            }
-        });
-
-
-        //Form Controls
+        // Formulaires : Nettoyage visuel au focus
         $('.form-control')
             .val('')
             .on("focusin", function(){
@@ -288,63 +179,28 @@
                 }
             });
 
-        // Lightbox init
+        // Lightbox (Pop-up images)
         $('body').magnificPopup({
             delegate: 'a.lightbox',
             type: 'image',
             removalDelay: 300,
-
             mainClass: 'mfp-fade',
             image: {
                 titleSrc: 'title',
-                gallery: {
-                    enabled: true
-                }
+                gallery: { enabled: true }
             },
-
             iframe: {
-                markup:
-                    '<div class="mfp-iframe-scaler">' +
-                        '<div class="mfp-close"></div>' +
-                        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-                        '<div class="mfp-title mfp-bottom-iframe-title"></div>' +
-                    '</div>',
-
+                markup: '<div class="mfp-iframe-scaler">'+
+                        '<div class="mfp-close"></div>'+
+                        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+                        '</div>',
                 patterns: {
-                    youtube: {
-                        index: 'youtube.com/',
-                        id: null,
-                        src: '%id%?autoplay=1'
-                    },
-                    vimeo: {
-                        index: 'vimeo.com/',
-                        id: '/',
-                        src: '//player.vimeo.com/video/%id%?autoplay=1'
-                    },
-                    gmaps: {
-                        index: '//maps.google.',
-                        src: '%id%&output=embed'
-                    }
+                    youtube: { index: 'youtube.com/', id: 'v=', src: '//www.youtube.com/embed/%id%?autoplay=1' },
+                    vimeo: { index: 'vimeo.com/', id: '/', src: '//player.vimeo.com/video/%id%?autoplay=1' }
                 },
-
                 srcAction: 'iframe_src'
-            },
-
-            callbacks: {
-                markupParse: function(template, values, item) {
-                    values.title = item.el.attr('title');
-                }
             }
         });
-
-        //Google Maps
-        if ($(".lmpixels-map")[0]) {
-            var address = "Sénat, Paris, France", // Adresse mise à jour
-                encoded = encodeURIComponent(address),
-                src = 'https://maps.google.com/maps?q=' + encoded +
-                      '&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near&output=embed';
-            $(".lmpixels-map iframe").attr("src", src);
-        }
     });
 
 })(jQuery);
