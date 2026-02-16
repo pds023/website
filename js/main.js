@@ -16,30 +16,33 @@
             return;
         }
 
-        // Accessibilité
-        $portfolio_filter.find('a').attr('role', 'button').attr('aria-pressed', 'false');
-        $portfolio_filter.find('li.active a').attr('aria-pressed', 'true');
-
-        $portfolio_filter.on("click", "a", function (e) {
-            e.preventDefault();
-
+        $portfolio_filter.on("click", "button", function () {
             var $this  = $(this);
             var filter = $this.data('filter');
             var $items = $portfolio_grid.find('figure');
 
             // Gestion visuelle des boutons
             $this.parent().addClass('active').siblings().removeClass('active');
-            
+
             // Mise à jour ARIA
-            $portfolio_filter.find('a').attr('aria-pressed', 'false');
+            $portfolio_filter.find('button').attr('aria-pressed', 'false');
             $this.attr('aria-pressed', 'true');
 
             // Filtrage simple (Le CSS Grid s'adapte automatiquement quand on cache des éléments)
+            var visibleCount;
             if (!filter || filter === '*') {
                 $items.fadeIn(300);
+                visibleCount = $items.length;
             } else {
-                $items.hide(); 
+                $items.hide();
                 $items.filter(filter).fadeIn(300);
+                visibleCount = $items.filter(filter).length;
+            }
+
+            // Annonce pour les lecteurs d'écran
+            var $liveRegion = $('.portfolio-live-region');
+            if ($liveRegion.length) {
+                $liveRegion.text(visibleCount + ' item(s) displayed');
             }
         });
     }
@@ -167,40 +170,6 @@
             animateIn: 'animated-section-scaleUp'
         });
 
-        // Formulaires : Nettoyage visuel au focus
-        $('.form-control')
-            .val('')
-            .on("focusin", function(){
-                $(this).parent('.form-group').addClass('form-group-focus');
-            })
-            .on("focusout", function(){
-                if($(this).val().length === 0) {
-                    $(this).parent('.form-group').removeClass('form-group-focus');
-                }
-            });
-
-        // Lightbox (Pop-up images)
-        $('body').magnificPopup({
-            delegate: 'a.lightbox',
-            type: 'image',
-            removalDelay: 300,
-            mainClass: 'mfp-fade',
-            image: {
-                titleSrc: 'title',
-                gallery: { enabled: true }
-            },
-            iframe: {
-                markup: '<div class="mfp-iframe-scaler">'+
-                        '<div class="mfp-close"></div>'+
-                        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-                        '</div>',
-                patterns: {
-                    youtube: { index: 'youtube.com/', id: 'v=', src: '//www.youtube.com/embed/%id%?autoplay=1' },
-                    vimeo: { index: 'vimeo.com/', id: '/', src: '//player.vimeo.com/video/%id%?autoplay=1' }
-                },
-                srcAction: 'iframe_src'
-            }
-        });
     });
 
 })(jQuery);

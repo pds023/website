@@ -10,6 +10,10 @@
     <meta name="author" content="Philippe Fontaine" />
     <meta name="robots" content="index,follow">
   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap">
+
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="canonical" href="https://www.philippefontaine.eu/index-fr.html">
   
@@ -44,6 +48,31 @@
         "addressCountry": "FR"
       },
       "email": "mailto:philippe.fontaine.ds@proton.me",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Sénat",
+        "url": "https://www.senat.fr"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "ENSAI - École nationale de la statistique et de l'analyse de l'information"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Université de Rennes"
+        }
+      ],
+      "knowsAbout": [
+        "Data science",
+        "Évaluation de politiques publiques",
+        "Lutte contre la fraude",
+        "Finances publiques",
+        "R Shiny",
+        "Économétrie",
+        "Machine learning",
+        "Fiscalité des entreprises"
+      ],
       "sameAs": [
         "https://fr.linkedin.com/in/philippe-fontaine-ds",
         "https://github.com/pds023"
@@ -61,7 +90,7 @@
   </head>
 
   <body>
-    <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Aller au contenu principal</a>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
     <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
     <div class="preloader" role="status" aria-label="Chargement de la page">
@@ -131,7 +160,7 @@
                 </a>
               </li>
               <li>
-                <a href="mailto:philippe.fontaine.ds@proton.me" target="_blank" aria-label="Envoyer un e-mail à Philippe Fontaine">
+                <a href="mailto:philippe.fontaine.ds@proton.me" aria-label="Envoyer un e-mail à Philippe Fontaine">
                   <i class="far fa-envelope" aria-hidden="true"></i>
                 </a>
               </li>
@@ -309,7 +338,7 @@
                               Je rédige des notes, rapports techniques et synthèses pour des publics variés (directions
                               d’administration centrale, corps d’inspection, parlementaires). Je veille à expliciter
                               les hypothèses, à présenter les résultats de manière claire et sincère, et à mettre en
-                              avant les principaux enjeux et arbitrages pour pour permettre une décision éclairée.
+                              avant les principaux enjeux et arbitrages pour permettre une décision éclairée.
                             </p>
                           </div>
                         </div>
@@ -624,14 +653,14 @@
                 <div class="page-title">
                   <h2>Portfolio</h2>
                 </div>
-                <div class="portfolio-filters">
+                <div class="portfolio-filters" role="group" aria-label="Filtres du portfolio">
                   <ul>
-                    <li class="active"><a href="#" data-filter="*">Tous</a></li>
-                    <li><a href="#" data-filter=".shiny-app">Applications Shiny</a></li>
-                    <li><a href="#" data-filter=".data-viz">Visualisations de données</a></li>
+                    <li class="active"><button type="button" data-filter="*" aria-pressed="true">Tous</button></li>
+                    <li><button type="button" data-filter=".shiny-app" aria-pressed="false">Applications Shiny</button></li>
                   </ul>
                 </div>
 
+                <div aria-live="polite" class="portfolio-live-region" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);"></div>
                 <div class="portfolio-grid">
                   <figure class="shiny-app">
                     <a href="https://l023aq.shinyapps.io/thesesfr/" target="_blank" rel="noopener noreferrer" class="portfolio-item-img" aria-label="Ouvrir l’application ThesisR">
@@ -677,7 +706,7 @@
 
                   <figure class="shiny-app">
                     <a href="mailto:philippe.fontaine.ds@proton.me?subject=Demande%20d%27accès%20VulnGovTracker" class="portfolio-item-img" aria-label="Demander l'accès à VulnGovTracker par email">
-                      <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                      <i class="fas fa-envelope" aria-hidden="true"></i>
                     </a>
                     <figcaption class="portfolio-item-desc">
                       <h4>VulnGovTracker</h4>
@@ -824,14 +853,10 @@
     <script src="js/animating.js"></script>
 
     <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
 
     <script src='js/perfect-scrollbar.min.js'></script>
-    <script src='js/masonry.pkgd.min.js'></script>
     <script src='js/owl.carousel.min.js'></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
 
-    <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
