@@ -8,7 +8,7 @@
 /* ------------------------------------------------------------
 1. Fonts
 ------------------------------------------------------------ */
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i');
+/* Poppins font loaded via <link> in HTML head for better performance */
 @import url('./fonts/linear-icons-font/style.css');
 @import url('./fonts/fontawesome-free-5.12.1-web/css/all.min.css');
 
@@ -418,7 +418,14 @@ p {
 .portfolio-filters { margin-bottom: 30px; }
 .portfolio-filters li { display: inline-block; margin-right: 15px; font-size: 13px; opacity: 0.7; }
 .portfolio-filters li.active { opacity: 1; }
-.portfolio-filters li a { color: #aaa; cursor: pointer; }
+.portfolio-filters li a,
+.portfolio-filters li button {
+  color: #aaa; cursor: pointer;
+  background: none; border: none; padding: 0;
+  font-family: inherit; font-size: inherit;
+}
+.portfolio-filters li.active button,
+.portfolio-filters li button:hover { color: #fff; }
 
 /* Grid System */
 .portfolio-grid {
@@ -601,6 +608,22 @@ p {
     width: 100%; display: block; padding: 0 0 10px 25px; text-align: left;
   }
   .timeline-second-style .divider { left: 0; }
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute; left: -9999px; top: auto;
+  width: 1px; height: 1px; overflow: hidden;
+  z-index: 10000;
+}
+.skip-link:focus {
+  left: 10px; top: 10px;
+  width: auto; height: auto; overflow: visible;
+  background: #0ba376; color: #fff;
+  padding: 10px 20px; border-radius: 6px;
+  font-size: 14px; font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
 }
 
 /* Focus States */

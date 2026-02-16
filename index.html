@@ -10,6 +10,10 @@
     <meta name="author" content="Philippe Fontaine" />
     <meta name="robots" content="index,follow">
   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap">
+
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="canonical" href="https://www.philippefontaine.eu/">
   
@@ -34,7 +38,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Philippe Fontaine",
-      "jobTitle": "Data scientist",
+      "jobTitle": "Data Scientist",
       "url": "https://www.philippefontaine.eu/",
       "image": "https://www.philippefontaine.eu/img/main_photo.jpg",
       "address": {
@@ -43,6 +47,31 @@
         "addressCountry": "FR"
       },
       "email": "mailto:philippe.fontaine.ds@proton.me",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "French Senate",
+        "url": "https://www.senat.fr"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "ENSAI - National School for Statistics and Information Analysis"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "University of Rennes"
+        }
+      ],
+      "knowsAbout": [
+        "Data Science",
+        "Public Policy Evaluation",
+        "Fraud Detection",
+        "Public Finance",
+        "R Shiny",
+        "Econometrics",
+        "Machine Learning",
+        "Corporate Taxation"
+      ],
       "sameAs": [
         "https://fr.linkedin.com/in/philippe-fontaine-ds",
         "https://github.com/pds023"
@@ -60,7 +89,7 @@
   </head>
 
   <body>
-    <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
     <div class="preloader" role="status" aria-label="Page loading">
@@ -130,7 +159,7 @@
                 </a>
               </li>
               <li>
-                <a href="mailto:philippe.fontaine.ds@proton.me" target="_blank" aria-label="Send an email to Philippe Fontaine">
+                <a href="mailto:philippe.fontaine.ds@proton.me" aria-label="Send an email to Philippe Fontaine">
                   <i class="far fa-envelope" aria-hidden="true"></i>
                 </a>
               </li>
@@ -437,15 +466,30 @@
 
                       <div class="timeline-item clearfix">
                         <div class="left-part">
-                          <h5 class="item-period">2015</h5>
+                          <h5 class="item-period">2013 - 2015</h5>
                           <span class="item-company">ENSAI - National School for Statistics and Information Analysis</span>
                         </div>
                         <div class="divider"></div>
                         <div class="right-part">
                           <h4 class="item-title">Insee statistician</h4>
                           <p>
-                            Training in statistical modelling, quantitative economics, national accounts and computer 
+                            Training in statistical modelling, quantitative economics, national accounts and computer
                             science for public statistics and public policy analysis.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="timeline-item clearfix">
+                        <div class="left-part">
+                          <h5 class="item-period">2011 - 2013</h5>
+                          <span class="item-company">Lycée Alphonse Daudet – Nîmes</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="right-part">
+                          <h4 class="item-title">Preparatory classes MPSI / MP</h4>
+                          <p>
+                            Preparation for competitive entrance examinations to engineering and graduate schools
+                            (mathematics and physics).
                           </p>
                         </div>
                       </div>
@@ -602,14 +646,14 @@
                 <div class="page-title">
                   <h2>Portfolio</h2>
                 </div>
-                <div class="portfolio-filters">
+                <div class="portfolio-filters" role="group" aria-label="Portfolio filters">
                   <ul>
-                    <li class="active"><a href="#" data-filter="*">All</a></li>
-                    <li><a href="#" data-filter=".shiny-app">Shiny Apps</a></li>
-                    <li><a href="#" data-filter=".data-viz">Data Visualizations</a></li>
+                    <li class="active"><button type="button" data-filter="*" aria-pressed="true">All</button></li>
+                    <li><button type="button" data-filter=".shiny-app" aria-pressed="false">Shiny Apps</button></li>
                   </ul>
                 </div>
 
+                <div aria-live="polite" class="portfolio-live-region" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);"></div>
                 <div class="portfolio-grid">
                   <figure class="shiny-app">
                     <a href="https://l023aq.shinyapps.io/thesesfr/" target="_blank" rel="noopener noreferrer" class="portfolio-item-img" aria-label="Open ThesisR application">
@@ -654,7 +698,7 @@
 
                   <figure class="shiny-app">
                     <a href="mailto:philippe.fontaine.ds@proton.me?subject=Access%20Request%20VulnGovTracker" class="portfolio-item-img" aria-label="Request access to VulnGovTracker via email">
-                      <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                      <i class="fas fa-envelope" aria-hidden="true"></i>
                     </a>
                     <figcaption class="portfolio-item-desc">
                       <h4>VulnGovTracker</h4>
@@ -801,14 +845,10 @@
     <script src="js/animating.js"></script>
 
     <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
 
     <script src='js/perfect-scrollbar.min.js'></script>
-    <script src='js/masonry.pkgd.min.js'></script>
     <script src='js/owl.carousel.min.js'></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
 
-    <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
