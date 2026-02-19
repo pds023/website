@@ -1,7 +1,7 @@
 /*
 * Template Name: BreezyCV - Refactored for Senior Data Scientist Profile
 * Author: LMPixels (Modified by PF)
-* Version: 2.0 (Cleaned, No-Bloat)
+* Version: 3.0 (Pro Edition)
 */
 
 (function($) {
@@ -80,6 +80,93 @@
         }
     }
 
+    // Animated Counters
+    function animateCounters() {
+        var $counters = $('[data-count]');
+        $counters.each(function() {
+            var $el = $(this);
+            if ($el.data('counted')) return;
+            $el.data('counted', true);
+
+            var target = parseInt($el.data('count'), 10);
+            var suffix = $el.data('suffix') || '';
+            var duration = 1800;
+            var startTime = null;
+
+            function step(timestamp) {
+                if (!startTime) startTime = timestamp;
+                var progress = Math.min((timestamp - startTime) / duration, 1);
+                // Ease out cubic
+                var eased = 1 - Math.pow(1 - progress, 3);
+                var current = Math.floor(eased * target);
+                $el.text(current + suffix);
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                } else {
+                    $el.text(target + suffix);
+                }
+            }
+
+            requestAnimationFrame(step);
+        });
+    }
+
+    // Entrance Animations (Intersection Observer)
+    function initEntranceAnimations() {
+        var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+            // Show everything immediately
+            $('.fade-in-up').addClass('visible');
+            return;
+        }
+
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+            document.querySelectorAll('.fade-in-up').forEach(function(el) {
+                observer.observe(el);
+            });
+        } else {
+            // Fallback: show everything
+            $('.fade-in-up').addClass('visible');
+        }
+    }
+
+    // Re-trigger entrance animations when a section becomes active
+    function observeSectionChanges() {
+        // MutationObserver to watch for section-active class changes
+        var sections = document.querySelectorAll('.animated-section');
+        sections.forEach(function(section) {
+            var mo = new MutationObserver(function(mutations) {
+                mutations.forEach(function(m) {
+                    if (m.type === 'attributes' && m.attributeName === 'class') {
+                        var el = m.target;
+                        if (el.classList.contains('section-active')) {
+                            // Trigger entrance animations for this section
+                            var fadeEls = el.querySelectorAll('.fade-in-up');
+                            fadeEls.forEach(function(fadeEl, idx) {
+                                fadeEl.classList.remove('visible');
+                                setTimeout(function() {
+                                    fadeEl.classList.add('visible');
+                                }, 80 + idx * 80);
+                            });
+                            // Trigger counters
+                            setTimeout(animateCounters, 300);
+                        }
+                    }
+                });
+            });
+            mo.observe(section, { attributes: true });
+        });
+    }
+
     // --- Events --- //
 
     // Window Load
@@ -97,6 +184,13 @@
 
         mobileMenuHide();
         customScroll();
+
+        // Init entrance animations & counters
+        initEntranceAnimations();
+        observeSectionChanges();
+
+        // Trigger counters for initial visible section
+        setTimeout(animateCounters, 500);
     })
     .on('resize', function() {
         mobileMenuHide();
@@ -109,7 +203,7 @@
 
     // Document Ready
     $(document).ready(function () {
-        
+
         // Effet Parallaxe sur le fond (Désactivé si l'utilisateur demande "reduced motion")
         var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

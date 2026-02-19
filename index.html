@@ -91,6 +91,7 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
+    <canvas id="particles-canvas"></canvas>
     <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
     <div class="preloader" role="status" aria-label="Page loading">
       <div class="preloader-animation">
@@ -205,8 +206,8 @@
                           <div class="sp-subtitle">Economist</div>
                         </div>
                       </div>
-                      <p style="margin-top:15px;font-size:0.95em;max-width:46rem;margin-left:auto;margin-right:auto;">
-                        Data scientist specializing in public policy evaluation, fraud detection and public finance, 
+                      <p class="home-tagline">
+                        Data scientist specializing in public policy evaluation, fraud detection and public finance,
                         working with large administrative datasets to support evidence-based decision-making.
                       </p>
                     </div>
@@ -219,38 +220,41 @@
                 <div class="page-title">
                   <h2>About <span>Me</span></h2>
                 </div>
+                <hr class="section-separator">
 
                 <div class="row">
                   <div class="col-xs-12 col-sm-7">
+                    <div class="fade-in-up">
                     <p>
-                      I am a data scientist with a strong background in statistics, economics and computer science, 
-                      working for public institutions. My work focuses on putting data at the service of public 
-                      decision-making: evaluating public policies, analysing public finances and detecting fraud, 
+                      I am a data scientist with a strong background in statistics, economics and computer science,
+                      working for public institutions. My work focuses on putting data at the service of public
+                      decision-making: evaluating public policies, analysing public finances and detecting fraud,
                       always with a clear and documented methodology.
                     </p>
                     <p>
-                      After graduating from Ensai with a focus on statistics, economics, and computer science, I worked 
-                      at Insee and then at the French Treasury, where I was responsible for corporate tax forecasting 
-                      and contributed to international tax reforms. I later joined the General Inspectorate of Finance 
-                      as a data scientist, working on fraud detection, public policy evaluation and large-scale 
-                      administrative data (health, tax, public finances). I am now a data scientist at the French 
-                      Senate, providing quantitative support for evaluation and legislative work on economic, social and 
+                      After graduating from Ensai with a focus on statistics, economics, and computer science, I worked
+                      at Insee and then at the French Treasury, where I was responsible for corporate tax forecasting
+                      and contributed to international tax reforms. I later joined the General Inspectorate of Finance
+                      as a data scientist, working on fraud detection, public policy evaluation and large-scale
+                      administrative data (health, tax, public finances). I am now a data scientist at the French
+                      Senate, providing quantitative support for evaluation and legislative work on economic, social and
                       budgetary topics.
                     </p>
                     <p>
-                      Passionate about cybersecurity and social psychology, I also develop R Shiny applications and 
-                      open-source tools. Across all these projects, I pay particular attention to confidentiality, 
+                      Passionate about cybersecurity and social psychology, I also develop R Shiny applications and
+                      open-source tools. Across all these projects, I pay particular attention to confidentiality,
                       ethics and compliance with data protection regulations (including GDPR).
                     </p>
                     <p>
-                      I am especially interested in roles where data science supports the public interest: evaluation 
-                      units, financial and economic directorates, audit and inspection bodies, regulatory or supervisory 
+                      I am especially interested in roles where data science supports the public interest: evaluation
+                      units, financial and economic directorates, audit and inspection bodies, regulatory or supervisory
                       authorities, and parliamentary or independent institutions.
                     </p>
+                    </div>
                   </div>
 
                   <div class="col-xs-12 col-sm-5">
-                    <div class="info-list">
+                    <div class="info-list fade-in-up delay-1">
                       <ul>
                         <li>
                           <span class="title">Location</span>
@@ -270,13 +274,33 @@
                         </li>
                       </ul>
                     </div>
+
+                    <div class="white-space-20"></div>
+                    <div class="stats-section fade-in-up delay-2" aria-label="Key figures">
+                      <div class="stat-item">
+                        <div class="stat-number" data-count="10" data-suffix="+">0</div>
+                        <div class="stat-label">Years exp.</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number" data-count="16" data-suffix="">0</div>
+                        <div class="stat-label">Reports</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number" data-count="4" data-suffix="">0</div>
+                        <div class="stat-label">Shiny Apps</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number" data-count="4" data-suffix="">0</div>
+                        <div class="stat-label">Institutions</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="white-space-50"></div>
 
                 <div class="row">
                   <div class="col-xs-12 col-sm-12">
-                    <div class="block-title">
+                    <div class="block-title fade-in-up">
                       <h3>What <span>I Do</span></h3>
                     </div>
                   </div>
@@ -286,31 +310,31 @@
                   <div class="col-xs-12 col-sm-6">
                     <div class="col-inner">
                       <div class="info-list-w-icon">
-                        <div class="info-block-w-icon">
+                        <div class="info-block-w-icon fade-in-up delay-1">
                           <div class="ci-icon">
                             <i class="lnr lnr-laptop" aria-hidden="true"></i>
                           </div>
                           <div class="ci-text">
                             <h4>Shiny development</h4>
                             <p>
-                              I design interactive web applications using R (and sometimes Python), for data 
-                              visualization, monitoring of indicators and operational tools (HR management, mission 
-                              tracking, dashboards). The goal is to make complex data accessible both to decision-makers 
+                              I design interactive web applications using R (and sometimes Python), for data
+                              visualization, monitoring of indicators and operational tools (HR management, mission
+                              tracking, dashboards). The goal is to make complex data accessible both to decision-makers
                               and to operational teams, with robust and maintainable code.
                             </p>
                           </div>
                         </div>
-                        <div class="info-block-w-icon">
+                        <div class="info-block-w-icon fade-in-up delay-2">
                           <div class="ci-icon">
                             <i class="lnr lnr-database" aria-hidden="true"></i>
                           </div>
                           <div class="ci-text">
                             <h4>Data science</h4>
                             <p>
-                              I analyze large and heterogeneous datasets (health insurance data, tax data, budgetary 
-                              data) using econometrics, statistics and machine learning. My work covers fraud 
-                              detection, public policy evaluation, forecasting and financial modelling, with attention 
-                              to reproducibility, documentation and compliance with confidentiality and GDPR 
+                              I analyze large and heterogeneous datasets (health insurance data, tax data, budgetary
+                              data) using econometrics, statistics and machine learning. My work covers fraud
+                              detection, public policy evaluation, forecasting and financial modelling, with attention
+                              to reproducibility, documentation and compliance with confidentiality and GDPR
                               requirements.
                             </p>
                           </div>
@@ -322,30 +346,30 @@
                   <div class="col-xs-12 col-sm-6">
                     <div class="col-inner">
                       <div class="info-list-w-icon">
-                        <div class="info-block-w-icon">
+                        <div class="info-block-w-icon fade-in-up delay-3">
                           <div class="ci-icon">
                             <i class="lnr lnr-pencil" aria-hidden="true"></i>
                           </div>
                           <div class="ci-text">
                             <h4>Writing</h4>
                             <p>
-                              I draft notes, technical reports and syntheses for varied audiences (central government 
-                              directorates, inspectors, parliamentarians). I focus on explicit assumptions, clear and 
-                              honest presentation of results, and emphasis on the main trade-offs and implications 
+                              I draft notes, technical reports and syntheses for varied audiences (central government
+                              directorates, inspectors, parliamentarians). I focus on explicit assumptions, clear and
+                              honest presentation of results, and emphasis on the main trade-offs and implications
                               for decision-making.
                             </p>
                           </div>
                         </div>
-                        <div class="info-block-w-icon">
+                        <div class="info-block-w-icon fade-in-up delay-4">
                           <div class="ci-icon">
                             <i class="lnr lnr-pie-chart" aria-hidden="true"></i>
                           </div>
                           <div class="ci-text">
                             <h4>Economics</h4>
                             <p>
-                              My areas of specialization include public finance, corporate taxation, national accounts 
-                              and macroeconomics. I take part in costing exercises, spending reviews and assessments of 
-                              the economic effects of reforms, working closely with economists, statisticians and 
+                              My areas of specialization include public finance, corporate taxation, national accounts
+                              and macroeconomics. I take part in costing exercises, spending reviews and assessments of
+                              the economic effects of reforms, working closely with economists, statisticians and
                               policy teams.
                             </p>
                           </div>
@@ -361,11 +385,12 @@
                 <div class="page-title">
                   <h2>Resume</h2>
                 </div>
+                <hr class="section-separator">
 
                 <div class="row">
                   <div class="col-xs-12 col-sm-7">
 
-                    <div class="block-title">
+                    <div class="block-title fade-in-up">
                       <h3>Experience</h3>
                     </div>
 
@@ -646,6 +671,7 @@
                 <div class="page-title">
                   <h2>Portfolio</h2>
                 </div>
+                <hr class="section-separator">
                 <div class="portfolio-filters" role="group" aria-label="Portfolio filters">
                   <ul>
                     <li class="active"><button type="button" data-filter="*" aria-pressed="true">All</button></li>
@@ -717,10 +743,11 @@
                 <div class="page-title">
                   <h2>Publications</h2>
                 </div>
+                <hr class="section-separator">
 
                 <div class="row">
                   <div class="col-xs-12 col-sm-6">
-                    <div class="block-title">
+                    <div class="block-title fade-in-up">
                       <h3>Reports for the French Senate</h3>
                     </div>
                     <ul class="publications-list">
@@ -849,6 +876,7 @@
     <script src='js/perfect-scrollbar.min.js'></script>
     <script src='js/owl.carousel.min.js'></script>
 
+    <script src="js/particles.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
