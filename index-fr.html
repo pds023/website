@@ -92,6 +92,7 @@
   <body>
     <a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
+    <canvas id="particles-canvas"></canvas>
     <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
     <div class="preloader" role="status" aria-label="Chargement de la page">
       <div class="preloader-animation">
@@ -206,7 +207,7 @@
                           <div class="sp-subtitle">Économiste</div>
                         </div>
                       </div>
-                      <p style="margin-top:15px;font-size:0.95em;max-width:46rem;margin-left:auto;margin-right:auto;">
+                      <p class="home-tagline">
                         Data scientist spécialisé en évaluation de politiques publiques, lutte contre la fraude et
                         finances publiques, travaillant sur des bases de données administratives volumineuses pour éclairer la décision
                         publique.
@@ -221,40 +222,43 @@
                 <div class="page-title">
                   <h2>À propos de <span>moi</span></h2>
                 </div>
+                <hr class="section-separator">
 
                 <div class="row">
                   <div class="col-xs-12 col-sm-7">
+                    <div class="fade-in-up">
                     <p>
-                      De nature curieuse, j’ai développé une expertise en analyse de l’information et en communication
+                      De nature curieuse, j'ai développé une expertise en analyse de l'information et en communication
                       stratégique auprès des décideurs publics. Mon travail consiste à mettre les données au service de
-                      l’intérêt général&nbsp;: évaluation de politiques publiques, analyse des finances publiques,
+                      l'intérêt général&nbsp;: évaluation de politiques publiques, analyse des finances publiques,
                       détection de fraude, avec une méthodologie explicite et documentée.
                     </p>
                     <p>
-                      Diplômé de l’ENSAI en statistiques, économie et informatique, j’ai débuté ma carrière aux comptes
-                      trimestriels (investissement et impôts) de l’Insee , avant de rejoindre la Direction générale du Trésor où j’ai
-                      travaillé sur la fiscalité des entreprises et les réformes fiscales internationales. J’ai ensuite
-                      rejoint l’Inspection générale des finances comme data scientist, en charge de travaux de lutte
-                      contre la fraude, d’évaluation de politiques publiques et de valorisation de données massives
+                      Diplômé de l'ENSAI en statistiques, économie et informatique, j'ai débuté ma carrière aux comptes
+                      trimestriels (investissement et impôts) de l'Insee, avant de rejoindre la Direction générale du Trésor où j'ai
+                      travaillé sur la fiscalité des entreprises et les réformes fiscales internationales. J'ai ensuite
+                      rejoint l'Inspection générale des finances comme data scientist, en charge de travaux de lutte
+                      contre la fraude, d'évaluation de politiques publiques et de valorisation de données massives
                       (données de santé, données fiscales, finances publiques). Je suis désormais data scientist au
-                      Sénat, où j’apporte un appui quantitatif aux travaux d’évaluation et aux travaux législatifs sur
+                      Sénat, où j'apporte un appui quantitatif aux travaux d'évaluation et aux travaux législatifs sur
                       des sujets économiques, sociaux et budgétaires.
                     </p>
                     <p>
                       Passionné de cybersécurité et de psychologie sociale, je développe également des applications
-                      R Shiny et des outils open source. Dans tous ces projets, j’accorde une attention particulière à la
-                      confidentialité, à l’éthique et au respect des cadres juridiques (notamment RGPD).
+                      R Shiny et des outils open source. Dans tous ces projets, j'accorde une attention particulière à la
+                      confidentialité, à l'éthique et au respect des cadres juridiques (notamment RGPD).
                     </p>
                     <p>
                       Je suis particulièrement intéressé par les fonctions où la data science soutient la décision
-                      publique&nbsp;: cellules d’évaluation, directions financières et économiques, corps d’audit et
-                      d’inspection, autorités de régulation ou de contrôle, institutions parlementaires et autorités
+                      publique&nbsp;: cellules d'évaluation, directions financières et économiques, corps d'audit et
+                      d'inspection, autorités de régulation ou de contrôle, institutions parlementaires et autorités
                       indépendantes.
                     </p>
+                    </div>
                   </div>
 
                   <div class="col-xs-12 col-sm-5">
-                    <div class="info-list">
+                    <div class="info-list fade-in-up delay-1">
                       <ul>
                         <li>
                           <span class="title">Lieu</span>
@@ -274,13 +278,33 @@
                         </li>
                       </ul>
                     </div>
+
+                    <div class="white-space-20"></div>
+                    <div class="stats-section fade-in-up delay-2" aria-label="Chiffres clés">
+                      <div class="stat-item">
+                        <div class="stat-number" data-count="10" data-suffix="+">0</div>
+                        <div class="stat-label">Ans d'exp.</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number" data-count="16" data-suffix="">0</div>
+                        <div class="stat-label">Rapports</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number" data-count="4" data-suffix="">0</div>
+                        <div class="stat-label">Apps Shiny</div>
+                      </div>
+                      <div class="stat-item">
+                        <div class="stat-number" data-count="4" data-suffix="">0</div>
+                        <div class="stat-label">Institutions</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="white-space-50"></div>
 
                 <div class="row">
                   <div class="col-xs-12 col-sm-12">
-                    <div class="block-title">
+                    <div class="block-title fade-in-up">
                       <h3>Ce que <span>je fais</span></h3>
                     </div>
                   </div>
@@ -290,7 +314,7 @@
                   <div class="col-xs-12 col-sm-6">
                     <div class="col-inner">
                       <div class="info-list-w-icon">
-                        <div class="info-block-w-icon">
+                        <div class="info-block-w-icon fade-in-up delay-1">
                           <div class="ci-icon">
                             <i class="lnr lnr-laptop" aria-hidden="true"></i>
                           </div>
@@ -298,23 +322,23 @@
                             <h4>Développement Shiny</h4>
                             <p>
                               Je conçois des applications web interactives (R&nbsp;/ Shiny, parfois Python) pour la
-                              visualisation de données, le suivi d’indicateurs et la mise à disposition d’outils
-                              opérationnels (gestion RH, suivi de missions, tableaux de bord). L’objectif est de rendre
+                              visualisation de données, le suivi d'indicateurs et la mise à disposition d'outils
+                              opérationnels (gestion RH, suivi de missions, tableaux de bord). L'objectif est de rendre
                               les données complexes accessibles aux décideurs comme aux équipes métiers, avec un code
                               robuste et maintenable.
                             </p>
                           </div>
                         </div>
-                        <div class="info-block-w-icon">
+                        <div class="info-block-w-icon fade-in-up delay-2">
                           <div class="ci-icon">
                             <i class="lnr lnr-database" aria-hidden="true"></i>
                           </div>
                           <div class="ci-text">
                             <h4>Data science</h4>
                             <p>
-                              J’analyse des données volumineuses et hétérogènes (SNDS, données fiscales, données
+                              J'analyse des données volumineuses et hétérogènes (SNDS, données fiscales, données
                               budgétaires) en mobilisant économétrie, statistiques et machine learning. Mes travaux
-                              portent notamment sur la lutte contre la fraude, l’évaluation de politiques publiques,
+                              portent notamment sur la lutte contre la fraude, l'évaluation de politiques publiques,
                               la prévision et la modélisation financière, avec un souci de reproductibilité, de
                               documentation et de conformité aux exigences de confidentialité et de protection des
                               données (RGPD).
@@ -328,7 +352,7 @@
                   <div class="col-xs-12 col-sm-6">
                     <div class="col-inner">
                       <div class="info-list-w-icon">
-                        <div class="info-block-w-icon">
+                        <div class="info-block-w-icon fade-in-up delay-3">
                           <div class="ci-icon">
                             <i class="lnr lnr-pencil" aria-hidden="true"></i>
                           </div>
@@ -336,13 +360,13 @@
                             <h4>Rédaction</h4>
                             <p>
                               Je rédige des notes, rapports techniques et synthèses pour des publics variés (directions
-                              d’administration centrale, corps d’inspection, parlementaires). Je veille à expliciter
+                              d'administration centrale, corps d'inspection, parlementaires). Je veille à expliciter
                               les hypothèses, à présenter les résultats de manière claire et sincère, et à mettre en
                               avant les principaux enjeux et arbitrages pour permettre une décision éclairée.
                             </p>
                           </div>
                         </div>
-                        <div class="info-block-w-icon">
+                        <div class="info-block-w-icon fade-in-up delay-4">
                           <div class="ci-icon">
                             <i class="lnr lnr-pie-chart" aria-hidden="true"></i>
                           </div>
@@ -350,8 +374,8 @@
                             <h4>Économie</h4>
                             <p>
                               Mes domaines de spécialisation couvrent les finances publiques, la fiscalité des
-                              entreprises, la comptabilité nationale et la macroéconomie. J’interviens dans des travaux
-                              de chiffrage, de revues de dépenses et d’évaluation des effets économiques de réformes.
+                              entreprises, la comptabilité nationale et la macroéconomie. J'interviens dans des travaux
+                              de chiffrage, de revues de dépenses et d'évaluation des effets économiques de réformes.
                             </p>
                           </div>
                         </div>
@@ -366,11 +390,12 @@
                 <div class="page-title">
                   <h2>Parcours</h2>
                 </div>
+                <hr class="section-separator">
 
                 <div class="row">
                   <div class="col-xs-12 col-sm-7">
 
-                    <div class="block-title">
+                    <div class="block-title fade-in-up">
                       <h3>Expériences</h3>
                     </div>
 
@@ -653,6 +678,7 @@
                 <div class="page-title">
                   <h2>Portfolio</h2>
                 </div>
+                <hr class="section-separator">
                 <div class="portfolio-filters" role="group" aria-label="Filtres du portfolio">
                   <ul>
                     <li class="active"><button type="button" data-filter="*" aria-pressed="true">Tous</button></li>
@@ -725,10 +751,11 @@
                 <div class="page-title">
                   <h2>Publications</h2>
                 </div>
+                <hr class="section-separator">
 
                 <div class="row">
                   <div class="col-xs-12 col-sm-6">
-                    <div class="block-title">
+                    <div class="block-title fade-in-up">
                       <h3>Rapports pour le Sénat</h3>
                     </div>
                     <ul class="publications-list">
@@ -857,6 +884,7 @@
     <script src='js/perfect-scrollbar.min.js'></script>
     <script src='js/owl.carousel.min.js'></script>
 
+    <script src="js/particles.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
