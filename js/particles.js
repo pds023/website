@@ -10,11 +10,11 @@
   if (prefersReducedMotion) return;
 
   var canvas, ctx, particles, animationId;
-  var PARTICLE_COUNT = 50;
-  var CONNECTION_DISTANCE = 120;
-  var PARTICLE_SPEED = 0.3;
+  var PARTICLE_COUNT = 30;
+  var CONNECTION_DISTANCE = 100;
+  var PARTICLE_SPEED = 0.2;
   var PARTICLE_SIZE_MIN = 1;
-  var PARTICLE_SIZE_MAX = 3;
+  var PARTICLE_SIZE_MAX = 2;
   var COLOR = 'rgba(11, 163, 118, ';
 
   function init() {
@@ -43,7 +43,7 @@
         vx: (Math.random() - 0.5) * PARTICLE_SPEED,
         vy: (Math.random() - 0.5) * PARTICLE_SPEED,
         size: PARTICLE_SIZE_MIN + Math.random() * (PARTICLE_SIZE_MAX - PARTICLE_SIZE_MIN),
-        opacity: 0.2 + Math.random() * 0.4
+        opacity: 0.1 + Math.random() * 0.25
       });
     }
   }
@@ -78,7 +78,7 @@
         var dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < CONNECTION_DISTANCE) {
-          var lineOpacity = (1 - dist / CONNECTION_DISTANCE) * 0.15;
+          var lineOpacity = (1 - dist / CONNECTION_DISTANCE) * 0.08;
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
