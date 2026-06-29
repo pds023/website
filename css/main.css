@@ -8,11 +8,9 @@
 /* ------------------------------------------------------------
 1. Fonts
 ------------------------------------------------------------ */
-/*
- * Poppins (Google Fonts), Linear Icons and Font Awesome are loaded via <link>
- * tags in the HTML <head> so they download in parallel with this file instead
- * of being chained behind it via @import (which blocks rendering).
- */
+/* Poppins font loaded via <link> in HTML head for better performance */
+@import url('./fonts/linear-icons-font/style.css');
+@import url('./fonts/fontawesome-free-5.12.1-web/css/all.min.css');
 
 
 /* ------------------------------------------------------------
@@ -816,113 +814,4 @@ p {
   border: none;
   margin: 0 0 30px 0;
   border-radius: 2px;
-}
-
-/* ------------------------------------------------------------
-11. Preloader failsafe
-   Hide the preloader after a few seconds even if JavaScript fails
-   to fire its "load" handler, so the content is never stuck behind it.
------------------------------------------------------------- */
-.preloader {
-  animation: preloaderFailsafe 0s linear 10s forwards;
-}
-@keyframes preloaderFailsafe {
-  to { opacity: 0; visibility: hidden; }
-}
-
-/* ------------------------------------------------------------
-12. Print styles
-   The screen layout uses absolutely-positioned, overlapping sections that
-   are revealed one at a time. For print/PDF we flatten everything into a
-   single readable, light-on-white document (useful for saving the CV).
------------------------------------------------------------- */
-@media print {
-  html, body {
-    overflow: visible !important;
-    height: auto !important;
-    background: #fff !important;
-    color: #000 !important;
-    animation: none !important;
-  }
-
-  /* Hide purely decorative / interactive chrome */
-  #particles-canvas,
-  .lm-animated-bg,
-  .preloader,
-  .menu-toggle,
-  .lmpixels-arrows-nav,
-  .social-links,
-  .header-buttons,
-  .skip-link,
-  ul.main-menu,
-  .portfolio-filters {
-    display: none !important;
-  }
-
-  .page { padding: 0 !important; }
-  .page-content {
-    box-shadow: none !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    background: #fff !important;
-    border-radius: 0 !important;
-  }
-
-  .header {
-    position: static !important;
-    float: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    max-height: none !important;
-    padding: 0 0 16px !important;
-    text-align: left !important;
-    overflow: visible !important;
-    background: transparent !important;
-  }
-  .header-photo { margin: 0 0 16px !important; }
-
-  .content-area {
-    position: static !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .animated-sections {
-    position: static !important;
-    height: auto !important;
-    perspective: none !important;
-  }
-  .animated-section {
-    position: static !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    height: auto !important;
-    overflow: visible !important;
-    transform: none !important;
-    page-break-inside: auto;
-    break-inside: auto;
-  }
-  .section-content {
-    background: #fff !important;
-    color: #000 !important;
-    min-height: 0 !important;
-    padding: 0 0 24px !important;
-  }
-
-  h1, h2, h3, h4, h5, h6,
-  .page-title h2 span,
-  .block-title h3 span { color: #000 !important; -webkit-text-fill-color: #000 !important; }
-  p { text-align: left !important; color: #000 !important; }
-  a { color: #000 !important; text-decoration: underline; }
-
-  /* Expose link targets so a printed CV stays actionable */
-  .publications-list a[href^="http"]::after,
-  .portfolio-item-desc a[href^="http"]::after {
-    content: " (" attr(href) ")";
-    font-size: 10px;
-    color: #555;
-    word-break: break-all;
-  }
 }

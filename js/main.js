@@ -191,13 +191,6 @@
 
         // Trigger counters for initial visible section
         setTimeout(animateCounters, 500);
-
-        // Register the service worker for offline support & faster repeat visits.
-        // Registration is fully optional: any failure is swallowed so it can
-        // never block the page.
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js').catch(function () {});
-        }
     })
     .on('resize', function() {
         mobileMenuHide();
