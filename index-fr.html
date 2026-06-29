@@ -2,30 +2,45 @@
 <html lang="fr" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Philippe Fontaine – Data scientist secteur public</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Progressive enhancement: swap no-js for js before first paint -->
+    <script>document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,"js");</script>
+
+    <title>Philippe Fontaine – Data scientist secteur public</title>
   
     <meta name="description" content="Philippe Fontaine, data scientist basé à Paris, spécialisé en évaluation de politiques publiques, lutte contre la fraude et finances publiques dans le secteur public français, avec une expérience à l’Insee, à la Direction générale du Trésor, à l’Inspection générale des finances et au Sénat." />
     <meta name="author" content="Philippe Fontaine" />
-    <meta name="robots" content="index,follow">
-  
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#0ba376">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="canonical" href="https://www.philippefontaine.eu/index-fr.html">
   
-    <link rel="alternate" href="https://www.philippefontaine.eu/index.html" hreflang="en">
+    <link rel="alternate" href="https://www.philippefontaine.eu/" hreflang="en">
     <link rel="alternate" href="https://www.philippefontaine.eu/index-fr.html" hreflang="fr">
-    <link rel="alternate" href="https://www.philippefontaine.eu/index.html" hreflang="x-default">
+    <link rel="alternate" href="https://www.philippefontaine.eu/" hreflang="x-default">
   
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Philippe Fontaine">
     <meta property="og:title" content="Philippe Fontaine – Data scientist secteur public">
     <meta property="og:description" content="Data scientist basé à Paris, spécialisé en évaluation de politiques publiques, lutte contre la fraude et finances publiques dans le secteur public français.">
     <meta property="og:url" content="https://www.philippefontaine.eu/index-fr.html">
     <meta property="og:image" content="https://www.philippefontaine.eu/img/main_photo.jpg">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="400">
+    <meta property="og:image:alt" content="Portrait de Philippe Fontaine">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:locale:alternate" content="en_US">
   
@@ -33,60 +48,77 @@
     <meta name="twitter:title" content="Philippe Fontaine – Data scientist secteur public">
     <meta name="twitter:description" content="Data scientist spécialisé en évaluation de politiques publiques, lutte contre la fraude et finances publiques dans le secteur public français.">
     <meta name="twitter:image" content="https://www.philippefontaine.eu/img/main_photo.jpg">
-  
+    <meta name="twitter:image:alt" content="Portrait de Philippe Fontaine">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Philippe Fontaine",
-      "jobTitle": "Data scientist",
-      "url": "https://www.philippefontaine.eu/",
-      "image": "https://www.philippefontaine.eu/img/main_photo.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Paris",
-        "addressCountry": "FR"
-      },
-      "email": "mailto:philippe.fontaine.ds@proton.me",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Sénat",
-        "url": "https://www.senat.fr"
-      },
-      "alumniOf": [
+      "@graph": [
         {
-          "@type": "EducationalOrganization",
-          "name": "ENSAI - École nationale de la statistique et de l'analyse de l'information"
+          "@type": "WebSite",
+          "@id": "https://www.philippefontaine.eu/#website",
+          "url": "https://www.philippefontaine.eu/index-fr.html",
+          "name": "Philippe Fontaine",
+          "inLanguage": "fr",
+          "publisher": { "@id": "https://www.philippefontaine.eu/#person" }
         },
         {
-          "@type": "EducationalOrganization",
-          "name": "Université de Rennes"
+          "@type": "Person",
+          "@id": "https://www.philippefontaine.eu/#person",
+          "name": "Philippe Fontaine",
+          "jobTitle": "Data scientist",
+          "description": "Data scientist spécialisé en évaluation de politiques publiques, lutte contre la fraude et finances publiques dans le secteur public français.",
+          "url": "https://www.philippefontaine.eu/",
+          "image": "https://www.philippefontaine.eu/img/main_photo.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Paris",
+            "addressCountry": "FR"
+          },
+          "email": "mailto:philippe.fontaine.ds@proton.me",
+          "knowsLanguage": ["French", "English"],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Sénat",
+            "url": "https://www.senat.fr"
+          },
+          "alumniOf": [
+            {
+              "@type": "EducationalOrganization",
+              "name": "ENSAI - École nationale de la statistique et de l'analyse de l'information"
+            },
+            {
+              "@type": "EducationalOrganization",
+              "name": "Université de Rennes"
+            }
+          ],
+          "knowsAbout": [
+            "Data science",
+            "Évaluation de politiques publiques",
+            "Lutte contre la fraude",
+            "Finances publiques",
+            "R Shiny",
+            "Économétrie",
+            "Machine learning",
+            "Fiscalité des entreprises"
+          ],
+          "sameAs": [
+            "https://fr.linkedin.com/in/philippe-fontaine-ds",
+            "https://github.com/pds023"
+          ]
         }
-      ],
-      "knowsAbout": [
-        "Data science",
-        "Évaluation de politiques publiques",
-        "Lutte contre la fraude",
-        "Finances publiques",
-        "R Shiny",
-        "Économétrie",
-        "Machine learning",
-        "Fiscalité des entreprises"
-      ],
-      "sameAs": [
-        "https://fr.linkedin.com/in/philippe-fontaine-ds",
-        "https://github.com/pds023"
       ]
     }
     </script>
   
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
-    <link rel="stylesheet" href="css/animations.css" type="text/css">
-    <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/fonts/linear-icons-font/style.css">
+    <link rel="stylesheet" href="css/fonts/fontawesome-free-5.12.1-web/css/all.min.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
 
   <body>
@@ -105,7 +137,7 @@
         <header id="site_header" class="header mobile-menu-hide" role="banner">
           <div class="header-content">
             <div class="header-photo">
-              <img src="img/main_photo.jpg" alt="Portrait de Philippe Fontaine">
+              <img src="img/main_photo.jpg" alt="Portrait de Philippe Fontaine" width="400" height="400" decoding="async" fetchpriority="high">
             </div>
             <div class="header-titles">
               <h1>Philippe Fontaine</h1>
