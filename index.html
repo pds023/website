@@ -1,877 +1,673 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Philippe Fontaine – Data Scientist | Public Policy & Fraud Detection</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-    <meta name="description" content="Philippe Fontaine, data scientist based in Paris, France. Specializing in public policy evaluation, fraud detection and public finance in the French public sector.">
-    <meta name="author" content="Philippe Fontaine" />
-    <meta name="robots" content="index,follow">
-  
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap">
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="canonical" href="https://www.philippefontaine.eu/">
-  
-    <link rel="alternate" href="https://www.philippefontaine.eu/index.html" hreflang="en">
-    <link rel="alternate" href="https://www.philippefontaine.eu/index-fr.html" hreflang="fr">
-    <link rel="alternate" href="https://www.philippefontaine.eu/index.html" hreflang="x-default">
-  
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Philippe Fontaine – Data Scientist in Public Policy & Fraud Detection">
-    <meta property="og:description" content="Data scientist based in Paris, France, specializing in public policy evaluation, fraud detection and public finance.">
-    <meta property="og:url" content="https://www.philippefontaine.eu/">
-    <meta property="og:image" content="https://www.philippefontaine.eu/img/main_photo.jpg">
-    <meta property="og:locale" content="en_US">
-  
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Philippe Fontaine – Data Scientist">
-    <meta name="twitter:description" content="Data scientist specializing in public policy evaluation, fraud detection and public finance.">
-    <meta name="twitter:image" content="https://www.philippefontaine.eu/img/main_photo.jpg">
-  
-    <script type="application/ld+json">
+<title>Philippe Fontaine — Data Scientist, Public Policy &amp; Fraud</title>
+<meta name="description" content="Philippe Fontaine is a data scientist at the French Senate, based in Paris. Ten years of public policy evaluation, fraud detection and public finance across Insee, the French Treasury, the General Inspectorate of Finance and Parliament.">
+<meta name="author" content="Philippe Fontaine">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0b0f14">
+<meta name="color-scheme" content="dark light">
+
+<link rel="canonical" href="https://www.philippefontaine.eu/">
+<link rel="alternate" hreflang="en" href="https://www.philippefontaine.eu/">
+<link rel="alternate" hreflang="fr" href="https://www.philippefontaine.eu/index-fr.html">
+<link rel="alternate" hreflang="x-default" href="https://www.philippefontaine.eu/">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Philippe Fontaine">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:title" content="Philippe Fontaine — Data Scientist in Public Policy &amp; Fraud Detection">
+<meta property="og:description" content="Data scientist at the French Senate, based in Paris. Public policy evaluation, fraud detection and public finance on large administrative datasets.">
+<meta property="og:url" content="https://www.philippefontaine.eu/">
+<meta property="og:image" content="https://www.philippefontaine.eu/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Philippe Fontaine, data scientist — public policy evaluation, fraud detection and public finance, Paris.">
+<meta property="profile:first_name" content="Philippe">
+<meta property="profile:last_name" content="Fontaine">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Philippe Fontaine — Data Scientist">
+<meta name="twitter:description" content="Public policy evaluation, fraud detection and public finance. Data scientist at the French Senate, Paris.">
+<meta name="twitter:image" content="https://www.philippefontaine.eu/img/og-card.png">
+<meta name="twitter:image:alt" content="Philippe Fontaine, data scientist — Paris, France.">
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+
+<link rel="preload" href="fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/source-serif-4-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+
+<script>
+/* Set the theme before first paint so there is no flash of the wrong colours. */
+(function () {
+  var d = document.documentElement, t;
+  d.classList.add('js');
+  try { t = localStorage.getItem('pf-theme'); } catch (e) {}
+  if (t !== 'light' && t !== 'dark') {
+    t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+  d.setAttribute('data-theme', t);
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@type": "Person",
+      "@type": "WebSite",
+      "@id": "https://www.philippefontaine.eu/#website",
+      "url": "https://www.philippefontaine.eu/",
       "name": "Philippe Fontaine",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://www.philippefontaine.eu/#person" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://www.philippefontaine.eu/#profilepage",
+      "url": "https://www.philippefontaine.eu/",
+      "name": "Philippe Fontaine — Data Scientist",
+      "isPartOf": { "@id": "https://www.philippefontaine.eu/#website" },
+      "about": { "@id": "https://www.philippefontaine.eu/#person" },
+      "inLanguage": "en",
+      "primaryImageOfPage": "https://www.philippefontaine.eu/img/main_photo.jpg"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.philippefontaine.eu/#person",
+      "name": "Philippe Fontaine",
+      "givenName": "Philippe",
+      "familyName": "Fontaine",
       "jobTitle": "Data Scientist",
+      "description": "Data scientist specialising in public policy evaluation, fraud detection and public finance, working with large administrative datasets in the French public sector.",
       "url": "https://www.philippefontaine.eu/",
       "image": "https://www.philippefontaine.eu/img/main_photo.jpg",
+      "email": "mailto:philippe.fontaine.ds@proton.me",
+      "knowsLanguage": ["fr", "en"],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Paris",
         "addressCountry": "FR"
       },
-      "email": "mailto:philippe.fontaine.ds@proton.me",
       "worksFor": {
-        "@type": "Organization",
+        "@type": "GovernmentOrganization",
         "name": "French Senate",
         "url": "https://www.senat.fr"
       },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Data Scientist",
+        "occupationLocation": { "@type": "City", "name": "Paris" },
+        "skills": "Public policy evaluation, fraud detection, public finance, econometrics, R Shiny, machine learning"
+      },
       "alumniOf": [
         {
-          "@type": "EducationalOrganization",
-          "name": "ENSAI - National School for Statistics and Information Analysis"
+          "@type": "CollegeOrUniversity",
+          "name": "ENSAI — National School for Statistics and Information Analysis",
+          "url": "https://ensai.fr"
         },
         {
-          "@type": "EducationalOrganization",
-          "name": "University of Rennes"
+          "@type": "CollegeOrUniversity",
+          "name": "University of Rennes",
+          "url": "https://www.univ-rennes.fr"
         }
       ],
       "knowsAbout": [
-        "Data Science",
-        "Public Policy Evaluation",
-        "Fraud Detection",
-        "Public Finance",
-        "R Shiny",
+        "Data science",
+        "Public policy evaluation",
+        "Fraud detection",
+        "Public finance",
+        "Corporate taxation",
         "Econometrics",
-        "Machine Learning",
-        "Corporate Taxation"
+        "Machine learning",
+        "R Shiny",
+        "Microsimulation",
+        "National accounts"
       ],
       "sameAs": [
         "https://fr.linkedin.com/in/philippe-fontaine-ds",
         "https://github.com/pds023"
       ]
     }
-    </script>
-  
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
-    <link rel="stylesheet" href="css/animations.css" type="text/css">
-    <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-  </head>
+  ]
+}
+</script>
+</head>
 
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<span id="newtab" class="visually-hidden">Opens in a new tab</span>
 
-    <canvas id="particles-canvas"></canvas>
-    <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
-    <div class="preloader" role="status" aria-label="Page loading">
-      <div class="preloader-animation">
-        <div class="preloader-spinner"></div>
+<!-- Icon sprite: one inline definition, reused through <use>. -->
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12" rx="1"/><circle cx="4" cy="4" r="2"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></symbol>
+  <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5z"/><path d="m15 5 4 4"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.5 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+</svg>
+
+<div class="utilbar">
+  <a class="utilbar__btn" href="index-fr.html" hreflang="fr" lang="fr" title="Voir cette page en français">FR<span class="visually-hidden"> — voir cette page en français</span></a>
+  <button class="utilbar__btn theme-toggle" type="button" aria-pressed="false">
+    <svg class="theme-toggle__sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+    <svg class="theme-toggle__moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+    <span class="visually-hidden">Switch between light and dark theme</span>
+  </button>
+</div>
+
+<div class="shell">
+
+  <aside class="sidebar">
+    <div class="profile">
+      <div class="profile__photo">
+        <picture>
+          <source srcset="img/main_photo.webp" type="image/webp">
+          <img src="img/main_photo.jpg" width="400" height="400" alt="Philippe Fontaine" fetchpriority="high" decoding="async">
+        </picture>
       </div>
+
+      <h1 class="profile__name">Philippe Fontaine</h1>
+      <p class="profile__role">Data Scientist</p>
+      <p class="profile__meta">
+        <span><svg aria-hidden="true"><use href="#i-pin"></use></svg> Paris, France</span>
+        <span aria-hidden="true">·</span>
+        <span>French public sector</span>
+      </p>
+
+      <p class="status">Open to discussion</p>
+
+      <div class="profile__actions">
+        <a class="btn btn--primary" href="img/resume/cv_public.pdf" download>
+          <svg aria-hidden="true"><use href="#i-download"></use></svg>
+          Download CV
+        </a>
+        <a class="btn btn--ghost" href="#contact">
+          <svg aria-hidden="true"><use href="#i-mail"></use></svg>
+          Get in touch
+        </a>
+      </div>
+
+      <ul class="socials">
+        <li>
+          <a href="https://fr.linkedin.com/in/philippe-fontaine-ds" target="_blank" rel="me noopener" title="LinkedIn">
+            <svg aria-hidden="true"><use href="#i-linkedin"></use></svg>
+            <span class="visually-hidden">LinkedIn profile (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/pds023" target="_blank" rel="me noopener" title="GitHub">
+            <svg aria-hidden="true"><use href="#i-github"></use></svg>
+            <span class="visually-hidden">GitHub profile (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:philippe.fontaine.ds@proton.me" title="E-mail">
+            <svg aria-hidden="true"><use href="#i-mail"></use></svg>
+            <span class="visually-hidden">Send an e-mail</span>
+          </a>
+        </li>
+      </ul>
     </div>
-    <div class="page">
-      <div class="page-content">
 
-        <header id="site_header" class="header mobile-menu-hide" role="banner">
-          <div class="header-content">
-            <div class="header-photo">
-              <img src="img/main_photo.jpg" alt="Portrait of Philippe Fontaine">
-            </div>
-            <div class="header-titles">
-              <h1>Philippe Fontaine</h1>
-              <h4>Data Scientist</h4>
-            </div>
-          </div>
+    <nav class="nav" aria-label="Sections">
+      <ul class="nav__list">
+        <li><a href="#about"><svg aria-hidden="true"><use href="#i-user"></use></svg>About</a></li>
+        <li><a href="#expertise"><svg aria-hidden="true"><use href="#i-compass"></use></svg>Expertise</a></li>
+        <li><a href="#experience"><svg aria-hidden="true"><use href="#i-briefcase"></use></svg>Experience</a></li>
+        <li><a href="#skills"><svg aria-hidden="true"><use href="#i-layers"></use></svg>Skills</a></li>
+        <li><a href="#projects"><svg aria-hidden="true"><use href="#i-grid"></use></svg>Projects</a></li>
+        <li><a href="#publications"><svg aria-hidden="true"><use href="#i-file"></use></svg>Publications</a></li>
+        <li><a href="#contact"><svg aria-hidden="true"><use href="#i-mail"></use></svg>Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-          <nav aria-label="Main navigation">
-            <ul class="main-menu">
-              <li class="active">
-                <a href="#home" class="nav-anim" aria-current="page">
-                  <span class="menu-icon lnr lnr-home" aria-hidden="true"></span>
-                  <span class="link-text">Home</span>
-                </a>
-              </li>
-              <li>
-                <a href="#about-me" class="nav-anim">
-                  <span class="menu-icon lnr lnr-user" aria-hidden="true"></span>
-                  <span class="link-text">About Me</span>
-                </a>
-              </li>
-              <li>
-                <a href="#resume" class="nav-anim">
-                  <span class="menu-icon lnr lnr-graduation-hat" aria-hidden="true"></span>
-                  <span class="link-text">Resume</span>
-                </a>
-              </li>
-              <li>
-                <a href="#portfolio" class="nav-anim">
-                  <span class="menu-icon lnr lnr-briefcase" aria-hidden="true"></span>
-                  <span class="link-text">Portfolio</span>
-                </a>
-              </li>
-              <li>
-                <a href="#blog" class="nav-anim">
-                  <span class="menu-icon lnr lnr-book" aria-hidden="true"></span>
-                  <span class="link-text">Publications</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+  <main class="main" id="main">
 
-          <div class="social-links" aria-label="Social profiles">
-            <ul>
-              <li>
-                <a href="https://fr.linkedin.com/in/philippe-fontaine-ds" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-                  <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/pds023" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-                  <i class="fab fa-github" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:philippe.fontaine.ds@proton.me" aria-label="Send an email to Philippe Fontaine">
-                  <i class="far fa-envelope" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+    <!-- ------------------------------------------------------------ About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <header class="section__head reveal">
+        <span class="eyebrow">About</span>
+        <h2 class="section__title" id="about-title">Data at the service of public decision-making</h2>
+        <p class="section__lede">
+          I work with large administrative datasets to evaluate public policies, analyse public finances
+          and detect fraud — always with a clear, documented and reproducible methodology.
+        </p>
+      </header>
 
-          <div class="header-buttons">
-            <a href="index-fr.html" class="btn btn-secondary" lang="fr" hreflang="fr">FR</a>
-            <a href="img/resume/cv_public.pdf" target="_blank" class="btn btn-primary" download aria-label="Download CV in PDF format">
-              Download CV
-            </a>
-          </div>
-
-          <div class="copyrights">© 2026 All rights reserved.</div>
-        </header>
-
-        <button class="menu-toggle" type="button" aria-label="Toggle main navigation" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div class="lmpixels-arrows-nav" aria-hidden="true">
-          <div class="lmpixels-arrow-right"><i class="lnr lnr-chevron-right"></i></div>
-          <div class="lmpixels-arrow-left"><i class="lnr lnr-chevron-left"></i></div>
+      <div class="about-grid">
+        <div class="prose reveal">
+          <p>
+            I am a data scientist with a strong background in statistics, economics and computer science,
+            working for public institutions. My work focuses on putting data at the service of public
+            decision-making: evaluating public policies, analysing public finances and detecting fraud,
+            always with a clear and documented methodology.
+          </p>
+          <p>
+            After graduating from ENSAI with a focus on statistics, economics and computer science, I worked
+            at Insee and then at the French Treasury, where I was responsible for corporate tax forecasting
+            and contributed to international tax reforms. I later joined the General Inspectorate of Finance
+            as a data scientist, working on fraud detection, public policy evaluation and large-scale
+            administrative data (health, tax, public finances). I am now a data scientist at the French
+            Senate, providing quantitative support for evaluation and legislative work on economic, social
+            and budgetary topics.
+          </p>
+          <p>
+            Passionate about cybersecurity and social psychology, I also develop R Shiny applications and
+            open-source tools. Across all these projects, I pay particular attention to confidentiality,
+            ethics and compliance with data protection regulations (including GDPR).
+          </p>
+          <p>
+            I am especially interested in roles where data science supports the public interest: evaluation
+            units, financial and economic directorates, audit and inspection bodies, regulatory or supervisory
+            authorities, and parliamentary or independent institutions.
+          </p>
         </div>
-        <main id="main-content" class="content-area" role="main">
-          <div class="animated-sections">
 
-            <section data-id="home" class="animated-section start-page" aria-label="Home">
-              <div class="section-content vcentered">
-                <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="title-block">
-                      <h2>Philippe Fontaine</h2>
-                      <div class="owl-carousel text-rotation" aria-label="Roles">
-                        <div class="item">
-                          <div class="sp-subtitle">Data Scientist</div>
-                        </div>
-                        <div class="item">
-                          <div class="sp-subtitle">Shiny Developer</div>
-                        </div>
-                        <div class="item">
-                          <div class="sp-subtitle">Economist</div>
-                        </div>
-                      </div>
-                      <p class="home-tagline">
-                        Data scientist specializing in public policy evaluation, fraud detection and public finance,
-                        working with large administrative datasets to support evidence-based decision-making.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section data-id="about-me" class="animated-section" aria-label="About me">
-              <div class="section-content">
-                <div class="page-title">
-                  <h2>About <span>Me</span></h2>
-                </div>
-                <hr class="section-separator">
+        <div class="reveal" data-reveal-delay="90">
+          <dl class="facts">
+            <div><dt>Location</dt><dd>Paris, France</dd></div>
+            <div><dt>E-mail</dt><dd><a href="mailto:philippe.fontaine.ds@proton.me">philippe.fontaine.ds@proton.me</a></dd></div>
+            <div><dt>Phone</dt><dd>Available upon request</dd></div>
+            <div><dt>Languages</dt><dd>French (native), English (professional)</dd></div>
+            <div><dt>Availability</dt><dd>Open to discussion</dd></div>
+          </dl>
 
-                <div class="row">
-                  <div class="col-xs-12 col-sm-7">
-                    <div class="fade-in-up">
-                    <p>
-                      I am a data scientist with a strong background in statistics, economics and computer science,
-                      working for public institutions. My work focuses on putting data at the service of public
-                      decision-making: evaluating public policies, analysing public finances and detecting fraud,
-                      always with a clear and documented methodology.
-                    </p>
-                    <p>
-                      After graduating from Ensai with a focus on statistics, economics, and computer science, I worked
-                      at Insee and then at the French Treasury, where I was responsible for corporate tax forecasting
-                      and contributed to international tax reforms. I later joined the General Inspectorate of Finance
-                      as a data scientist, working on fraud detection, public policy evaluation and large-scale
-                      administrative data (health, tax, public finances). I am now a data scientist at the French
-                      Senate, providing quantitative support for evaluation and legislative work on economic, social and
-                      budgetary topics.
-                    </p>
-                    <p>
-                      Passionate about cybersecurity and social psychology, I also develop R Shiny applications and
-                      open-source tools. Across all these projects, I pay particular attention to confidentiality,
-                      ethics and compliance with data protection regulations (including GDPR).
-                    </p>
-                    <p>
-                      I am especially interested in roles where data science supports the public interest: evaluation
-                      units, financial and economic directorates, audit and inspection bodies, regulatory or supervisory
-                      authorities, and parliamentary or independent institutions.
-                    </p>
-                    </div>
-                  </div>
-
-                  <div class="col-xs-12 col-sm-5">
-                    <div class="info-list fade-in-up delay-1">
-                      <ul>
-                        <li>
-                          <span class="title">Location</span>
-                          <span class="value">Paris, France</span>
-                        </li>
-                        <li>
-                          <span class="title">E-mail</span>
-                          <span class="value">philippe.fontaine.ds@proton.me</span>
-                        </li>
-                        <li>
-                          <span class="title">Phone</span>
-                          <span class="value">Available upon request</span>
-                        </li>
-                        <li>
-                          <span class="title">Availability</span>
-                          <span class="value">Open to discussion</span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="white-space-20"></div>
-                    <div class="stats-section fade-in-up delay-2" aria-label="Key figures">
-                      <div class="stat-item">
-                        <div class="stat-number" data-count="10" data-suffix="+">0</div>
-                        <div class="stat-label">Years exp.</div>
-                      </div>
-                      <div class="stat-item">
-                        <div class="stat-number" data-count="16" data-suffix="">0</div>
-                        <div class="stat-label">Reports</div>
-                      </div>
-                      <div class="stat-item">
-                        <div class="stat-number" data-count="4" data-suffix="">0</div>
-                        <div class="stat-label">Shiny Apps</div>
-                      </div>
-                      <div class="stat-item">
-                        <div class="stat-number" data-count="4" data-suffix="">0</div>
-                        <div class="stat-label">Institutions</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="white-space-50"></div>
-
-                <div class="row">
-                  <div class="col-xs-12 col-sm-12">
-                    <div class="block-title fade-in-up">
-                      <h3>What <span>I Do</span></h3>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-xs-12 col-sm-6">
-                    <div class="col-inner">
-                      <div class="info-list-w-icon">
-                        <div class="info-block-w-icon fade-in-up delay-1">
-                          <div class="ci-icon">
-                            <i class="lnr lnr-laptop" aria-hidden="true"></i>
-                          </div>
-                          <div class="ci-text">
-                            <h4>Shiny development</h4>
-                            <p>
-                              I design interactive web applications using R (and sometimes Python), for data
-                              visualization, monitoring of indicators and operational tools (HR management, mission
-                              tracking, dashboards). The goal is to make complex data accessible both to decision-makers
-                              and to operational teams, with robust and maintainable code.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="info-block-w-icon fade-in-up delay-2">
-                          <div class="ci-icon">
-                            <i class="lnr lnr-database" aria-hidden="true"></i>
-                          </div>
-                          <div class="ci-text">
-                            <h4>Data science</h4>
-                            <p>
-                              I analyze large and heterogeneous datasets (health insurance data, tax data, budgetary
-                              data) using econometrics, statistics and machine learning. My work covers fraud
-                              detection, public policy evaluation, forecasting and financial modelling, with attention
-                              to reproducibility, documentation and compliance with confidentiality and GDPR
-                              requirements.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-xs-12 col-sm-6">
-                    <div class="col-inner">
-                      <div class="info-list-w-icon">
-                        <div class="info-block-w-icon fade-in-up delay-3">
-                          <div class="ci-icon">
-                            <i class="lnr lnr-pencil" aria-hidden="true"></i>
-                          </div>
-                          <div class="ci-text">
-                            <h4>Writing</h4>
-                            <p>
-                              I draft notes, technical reports and syntheses for varied audiences (central government
-                              directorates, inspectors, parliamentarians). I focus on explicit assumptions, clear and
-                              honest presentation of results, and emphasis on the main trade-offs and implications
-                              for decision-making.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="info-block-w-icon fade-in-up delay-4">
-                          <div class="ci-icon">
-                            <i class="lnr lnr-pie-chart" aria-hidden="true"></i>
-                          </div>
-                          <div class="ci-text">
-                            <h4>Economics</h4>
-                            <p>
-                              My areas of specialization include public finance, corporate taxation, national accounts
-                              and macroeconomics. I take part in costing exercises, spending reviews and assessments of
-                              the economic effects of reforms, working closely with economists, statisticians and
-                              policy teams.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-            </section>
-            <section data-id="resume" class="animated-section" aria-label="Resume">
-              <div class="section-content">
-                <div class="page-title">
-                  <h2>Resume</h2>
-                </div>
-                <hr class="section-separator">
-
-                <div class="row">
-                  <div class="col-xs-12 col-sm-7">
-
-                    <div class="block-title fade-in-up">
-                      <h3>Experience</h3>
-                    </div>
-
-                    <div class="timeline timeline-second-style clearfix">
-                      <div class="timeline-item clearfix">
-                        <div class="left-part">
-                          <h5 class="item-period">2025 - Present</h5>
-                          <span class="item-company">French Senate</span>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="right-part">
-                          <h4 class="item-title">Data Scientist</h4>
-                          <p>
-                            Quantitative support for evaluation and oversight of government action (data analysis, impact 
-                            assessments, briefing notes) and contribution to legislative work through quantitative 
-                            analyses and simulations on economic, social and budgetary topics. The analyses feed into 
-                            parliamentary reports and support committees in their oversight and legislative work.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="timeline-item clearfix">
-                        <div class="left-part">
-                          <h5 class="item-period">2021 - 2025</h5>
-                          <span class="item-company">General Inspectorate of Finance</span>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="right-part">
-                          <h4 class="item-title">Data Scientist</h4>
-                          <p>
-                            Fraud detection (energy transition schemes, international trade), development of a rule 
-                            engine and a large price database from open sources, and no-code tools for business teams. 
-                            Evaluation of the national healthcare strategy (health insurance data, microsimulation) and 
-                            development of Shiny applications for HR, mission tracking, GDPR compliance and an 
-                            interactive dashboard of government revenues, used in spending reviews and evaluation 
-                            exercises.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="timeline-item clearfix">
-                        <div class="left-part">
-                          <h5 class="item-period">2018 - 2021</h5>
-                          <span class="item-company">French Treasury</span>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="right-part">
-                          <h4 class="item-title">Deputy Head - Corporate Taxes</h4>
-                          <p>
-                            Corporate tax studies and impact assessments, major contribution to evaluations and 
-                            negotiations on the introduction of a global minimum tax promoted by the OECD (BEPS project). 
-                            Modernisation and automation of the production of general government accounts, improving 
-                            timeliness, consistency and reproducibility of the figures used for policy and budget 
-                            discussions.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="timeline-item clearfix">
-                        <div class="left-part">
-                          <h5 class="item-period">2015 - 2018</h5>
-                          <span class="item-company">Insee</span>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="right-part">
-                          <h4 class="item-title">Estimation of investment and taxation</h4>
-                          <p>
-                            Produced quarterly statistics on investment and taxes using econometric models and 
-                            short-term indicators. Responsible for tax forecasts and monitoring economic trends for 
-                            Insee's economic outlook, in close coordination with national accounts and forecasting 
-                            teams.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="white-space-50"></div>
-
-                    <div class="block-title">
-                      <h3>Education</h3>
-                    </div>
-
-                    <div class="timeline timeline-second-style clearfix">
-                      <div class="timeline-item clearfix">
-                        <div class="left-part">
-                          <h5 class="item-period">2019</h5>
-                          <span class="item-company">University of Rennes</span>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="right-part">
-                          <h4 class="item-title">Master's degree, Evaluation and Public Decisions</h4>
-                          <p>
-                            Expertise in assessing public policies and making data-driven decisions to support 
-                            strategic planning, spending reviews and governance in the public sector.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="timeline-item clearfix">
-                        <div class="left-part">
-                          <h5 class="item-period">2013 - 2015</h5>
-                          <span class="item-company">ENSAI - National School for Statistics and Information Analysis</span>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="right-part">
-                          <h4 class="item-title">Insee statistician</h4>
-                          <p>
-                            Training in statistical modelling, quantitative economics, national accounts and computer
-                            science for public statistics and public policy analysis.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="timeline-item clearfix">
-                        <div class="left-part">
-                          <h5 class="item-period">2011 - 2013</h5>
-                          <span class="item-company">Lycée Alphonse Daudet – Nîmes</span>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="right-part">
-                          <h4 class="item-title">Preparatory classes MPSI / MP</h4>
-                          <p>
-                            Preparation for competitive entrance examinations to engineering and graduate schools
-                            (mathematics and physics).
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-
-                  <div class="col-xs-12 col-sm-5">
-                    <div class="block-title">
-                      <h3>Computer Science <span>Skills</span></h3>
-                    </div>
-
-                    <div class="skills-info skills-second-style">
-                      <div class="skill clearfix">
-                        <h4>R</h4>
-                        <div class="skill-value">Advanced</div>
-                      </div>
-                      <div class="skill-container skill-1">
-                        <div class="skill-percentage"></div>
-                      </div>
-
-                      <div class="skill clearfix">
-                        <h4>Python</h4>
-                        <div class="skill-value">Intermediate / Advanced</div>
-                      </div>
-                      <div class="skill-container skill-2">
-                        <div class="skill-percentage"></div>
-                      </div>
-
-                      <div class="skill clearfix">
-                        <h4>Shiny</h4>
-                        <div class="skill-value">Expert (R Shiny)</div>
-                      </div>
-                      <div class="skill-container skill-3">
-                        <div class="skill-percentage"></div>
-                      </div>
-
-                      <div class="skill clearfix">
-                        <h4>SAS</h4>
-                        <div class="skill-value">Intermediate</div>
-                      </div>
-                      <div class="skill-container skill-4">
-                        <div class="skill-percentage"></div>
-                      </div>
-
-                      <div class="skill clearfix">
-                        <h4>SQL</h4>
-                        <div class="skill-value">Intermediate</div>
-                      </div>
-                      <div class="skill-container skill-5">
-                        <div class="skill-percentage"></div>
-                      </div>
-
-                      <div class="skill clearfix">
-                        <h4>HTML / JS (React)</h4>
-                        <div class="skill-value">Intermediate</div>
-                      </div>
-                      <div class="skill-container skill-6">
-                        <div class="skill-percentage"></div>
-                      </div>
-
-                      <div class="skill clearfix">
-                        <h4>Git / Docker / Kubernetes</h4>
-                        <div class="skill-value">Intermediate</div>
-                      </div>
-                      <div class="skill-container skill-7">
-                        <div class="skill-percentage"></div>
-                      </div>
-                    </div>
-
-                    <div class="white-space-10"></div>
-
-                    <div class="block-title">
-                      <h3>Other <span>Skills</span></h3>
-                    </div>
-
-                    <div class="skills-info skills-second-style">
-                      <div class="skill clearfix">
-                        <h4>Fraud detection</h4>
-                        <div class="skill-value">Advanced (rules & models)</div>
-                      </div>
-                      <div class="skill-container skill-8">
-                        <div class="skill-percentage"></div>
-                      </div>
-
-                      <div class="skill clearfix">
-                        <h4>Corporate taxes</h4>
-                        <div class="skill-value">Advanced</div>
-                      </div>
-                      <div class="skill-container skill-9">
-                        <div class="skill-percentage"></div>
-                      </div>
-
-                      <div class="skill clearfix">
-                        <h4>Public policies</h4>
-                        <div class="skill-value">Advanced (evaluation)</div>
-                      </div>
-                      <div class="skill-container skill-10">
-                        <div class="skill-percentage"></div>
-                      </div>
-
-                      <div class="skill clearfix">
-                        <h4>Cybersecurity</h4>
-                        <div class="skill-value">Intermediate (exposure & awareness)</div>
-                      </div>
-                      <div class="skill-container skill-11">
-                        <div class="skill-percentage"></div>
-                      </div>
-
-                      <div class="skill clearfix">
-                        <h4>OSINT</h4>
-                        <div class="skill-value">Intermediate (open-source investigation)</div>
-                      </div>
-                      <div class="skill-container skill-12">
-                        <div class="skill-percentage"></div>
-                      </div>
-
-                      <div class="skill clearfix">
-                        <h4>Social engineering</h4>
-                        <div class="skill-value">Advanced (human risk awareness)</div>
-                      </div>
-                      <div class="skill-container skill-13">
-                        <div class="skill-percentage"></div>
-                      </div>
-                    </div>
-
-                    <div class="white-space-10"></div>
-
-                    <div class="block-title">
-                      <h3>Soft <span>Skills</span></h3>
-                    </div>
-
-                    <ul class="knowledges">
-                      <li>Critical thinking</li>
-                      <li>Cross-disciplinary thinking</li>
-                      <li>Problem-solving</li>
-                      <li>Adversarial thinking</li>
-                      <li>Persuasion</li>
-                      <li>Resilience</li>
-                    </ul>
-                  </div>
-                  </div>
-
-                <div class="white-space-50"></div>
-                </div>
-            </section>
-            <section data-id="portfolio" class="animated-section" aria-label="Portfolio">
-              <div class="section-content">
-                <div class="page-title">
-                  <h2>Portfolio</h2>
-                </div>
-                <hr class="section-separator">
-                <div class="portfolio-filters" role="group" aria-label="Portfolio filters">
-                  <ul>
-                    <li class="active"><button type="button" data-filter="*" aria-pressed="true">All</button></li>
-                    <li><button type="button" data-filter=".shiny-app" aria-pressed="false">Shiny Apps</button></li>
-                  </ul>
-                </div>
-
-                <div aria-live="polite" class="portfolio-live-region" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);"></div>
-                <div class="portfolio-grid">
-                  <figure class="shiny-app">
-                    <a href="https://l023aq.shinyapps.io/thesesfr/" target="_blank" rel="noopener noreferrer" class="portfolio-item-img" aria-label="Open ThesisR application">
-                      <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                    </a>
-                    <figcaption class="portfolio-item-desc">
-                      <h4>ThesisR</h4>
-                      <small>
-                        Interactive analysis of theses defended in France since 1985 (fields, institutions, dynamics 
-                        over time). Exploratory work on signals and profiles by field based on public data sources, 
-                        designed to illustrate how large textual and bibliographic datasets can be used for strategic 
-                        analysis.
-                      </small>
-                    </figcaption>
-                  </figure>
-
-                  <figure class="shiny-app">
-                    <a href="https://l023aq.shinyapps.io/minintCIR/" target="_blank" rel="noopener noreferrer" class="portfolio-item-img" aria-label="Open CIR application">
-                      <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                    </a>
-                    <figcaption class="portfolio-item-desc">
-                      <h4>CIR</h4>
-                      <small>
-                        Visualization of the main characteristics of Republican integration contracts, to support 
-                        analysis of trajectories and policies related to integration.
-                      </small>
-                    </figcaption>
-                  </figure>
-
-                  <figure class="shiny-app">
-                    <a href="https://l023aq.shinyapps.io/shinySignalConso/" target="_blank" rel="noopener noreferrer" class="portfolio-item-img" aria-label="Open consumer reports explorer">
-                      <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                    </a>
-                    <figcaption class="portfolio-item-desc">
-                      <h4>Report explorer</h4>
-                      <small>
-                        Exploration of consumer reports submitted via the SignalConso platform, with filters and 
-                        visualizations designed to help identify recurring issues and patterns.
-                      </small>
-                    </figcaption>
-                  </figure>
-
-                  <figure class="shiny-app">
-                    <a href="mailto:philippe.fontaine.ds@proton.me?subject=Access%20Request%20VulnGovTracker" class="portfolio-item-img" aria-label="Request access to VulnGovTracker via email">
-                      <i class="fas fa-envelope" aria-hidden="true"></i>
-                    </a>
-                    <figcaption class="portfolio-item-desc">
-                      <h4>VulnGovTracker</h4>
-                      <small>
-                        (Access on request) Monitoring of public agents’ exposure to known data breaches and email 
-                        leaks using the Have I Been Pwned dataset, to support awareness-raising and reduction of 
-                        cybersecurity risks in public organisations.
-                      </small>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-            </section>
-            <section data-id="blog" class="animated-section" aria-label="Publications">
-              <div class="section-content">
-                <div class="page-title">
-                  <h2>Publications</h2>
-                </div>
-                <hr class="section-separator">
-
-                <div class="row">
-                  <div class="col-xs-12 col-sm-6">
-                    <div class="block-title fade-in-up">
-                      <h3>Reports for the French Senate</h3>
-                    </div>
-                    <ul class="publications-list">
-                      <li>
-                        <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2025/r25-002-notice.html" target="_blank" rel="noopener noreferrer">
-                          Additional construction costs linked to regulatory standards
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/rapports-2025.html" target="_blank" rel="noopener noreferrer">
-                          Enforcing sentences: 20 proposals to improve enforcement and give meaning to criminal sanctions
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2024/r24-808-1-notice.html" target="_blank" rel="noopener noreferrer">
-                          Transparency and evaluation of state aid to businesses: a democratic demand and a key to economic efficiency
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2024/r24-814-notice.html" target="_blank" rel="noopener noreferrer">
-                          Changes in the financing of efforts to combat violence against women
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2024/r24-787-notice.html" target="_blank" rel="noopener noreferrer">
-                          Mental health and psychiatry: no "great national cause" without substantial resources
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2024/r24-671-notice.html" target="_blank" rel="noopener noreferrer">
-                          25 proposals to give municipal police the tools to tackle everyday insecurity
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2024/r24-616-notice.html" target="_blank" rel="noopener noreferrer">
-                          Employment of older workers: a key to safeguarding the pay-as-you-go pension system?
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2025</span>
-                        <a href="https://www.senat.fr/notice-rapport/2024/r24-514-notice.html" target="_blank" rel="noopener noreferrer">
-                          Tackling the high cost of living in the overseas territories: sticking plasters or real remedies?
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="col-xs-12 col-sm-6">
-                    <div class="block-title">
-                      <h3>Other reports (IGF and partners)</h3>
-                    </div>
-                    <ul class="publications-list">
-                      <li>
-                        <span class="pub-year">2024</span>
-                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports de mission/2024/Revue de dépenses Dispositif affections de longue durée -.pdf" target="_blank" rel="noopener noreferrer">
-                          Spending review on long-term conditions: towards a more efficient and equitable scheme
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2023</span>
-                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports de mission/2023/Rapport_CVAE_Version Internet" target="_blank" rel="noopener noreferrer">
-                          Territorial allocation of the compensation for the CVAE (value-added contribution of businesses)
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2023</span>
-                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports de mission/2024/Rapport_methodo_intervention_publique_Version Web.pdf" target="_blank" rel="noopener noreferrer">
-                          Cross-cutting methodological mission on the State's fields of intervention and public policy instruments
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2022</span>
-                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports de mission/2022/Rapport_scolarisation_eleves_situation_handicap.pdf" target="_blank" rel="noopener noreferrer">
-                          Schooling of pupils with disabilities
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2022</span>
-                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports de mission/2022/2022-M-012-06_Rapport_definitif_ORPEA.pdf" target="_blank" rel="noopener noreferrer">
-                          Mission on the management of nursing homes (EHPAD) in the Orpea group
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2021</span>
-                        <a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports de mission/2021/FS-oct-2021-RAPPORT-COEURE-RELANCE.pdf" target="_blank" rel="noopener noreferrer">
-                          Evaluation committee for the France Relance recovery plan
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2021</span>
-                        <a href="https://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/fs-2021-rapport-isf-14octobre-10h-couv-final.pdf" target="_blank" rel="noopener noreferrer">
-                          Evaluation committee for the reforms of capital taxation
-                        </a>
-                      </li>
-                      <li>
-                        <span class="pub-year">2020</span>
-                        <a href="https://www.ccomptes.fr/system/files/2020-10/20201014-rapport-particulier4-CPO-fiscalite-entreprises.pdf" target="_blank" rel="noopener noreferrer">
-                          New rules for the international taxation of corporations: assessment of the economic effects for France
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
-            </section>
-            </div>
-        </main>
-
+          <ul class="stats">
+            <li class="stat">
+              <div class="stat__value" data-count="10" data-suffix="+">10+</div>
+              <div class="stat__label">Years of experience</div>
+            </li>
+            <li class="stat">
+              <div class="stat__value" data-count="16">16</div>
+              <div class="stat__label">Published reports</div>
+            </li>
+            <li class="stat">
+              <div class="stat__value" data-count="4">4</div>
+              <div class="stat__label">Shiny applications</div>
+            </li>
+            <li class="stat">
+              <div class="stat__value" data-count="4">4</div>
+              <div class="stat__label">Public institutions</div>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
-    <script src="js/animating.js"></script>
+    <!-- -------------------------------------------------------- Expertise -->
+    <section class="section" id="expertise" aria-labelledby="expertise-title">
+      <header class="section__head reveal">
+        <span class="eyebrow">What I do</span>
+        <h2 class="section__title" id="expertise-title">Four things I am asked for</h2>
+      </header>
 
-    <script src="js/imagesloaded.pkgd.min.js"></script>
+      <div class="grid grid--2 expertise">
+        <article class="card reveal">
+          <span class="expertise__icon"><svg aria-hidden="true"><use href="#i-laptop"></use></svg></span>
+          <h3>Shiny development</h3>
+          <p>
+            I design interactive web applications using R (and sometimes Python) for data visualisation,
+            indicator monitoring and operational tools — HR management, mission tracking, dashboards.
+            The goal is to make complex data accessible to decision-makers and operational teams alike,
+            with robust and maintainable code.
+          </p>
+        </article>
 
-    <script src='js/perfect-scrollbar.min.js'></script>
-    <script src='js/owl.carousel.min.js'></script>
+        <article class="card reveal" data-reveal-delay="70">
+          <span class="expertise__icon"><svg aria-hidden="true"><use href="#i-database"></use></svg></span>
+          <h3>Data science</h3>
+          <p>
+            I analyse large and heterogeneous datasets — health insurance, tax and budgetary data — using
+            econometrics, statistics and machine learning. My work covers fraud detection, public policy
+            evaluation, forecasting and financial modelling, with attention to reproducibility,
+            documentation and compliance with confidentiality and GDPR requirements.
+          </p>
+        </article>
 
-    <script src="js/particles.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+        <article class="card reveal" data-reveal-delay="140">
+          <span class="expertise__icon"><svg aria-hidden="true"><use href="#i-pen"></use></svg></span>
+          <h3>Writing</h3>
+          <p>
+            I draft notes, technical reports and syntheses for varied audiences: central government
+            directorates, inspectors, parliamentarians. I focus on explicit assumptions, clear and honest
+            presentation of results, and emphasis on the main trade-offs and implications for
+            decision-making.
+          </p>
+        </article>
+
+        <article class="card reveal" data-reveal-delay="210">
+          <span class="expertise__icon"><svg aria-hidden="true"><use href="#i-chart"></use></svg></span>
+          <h3>Economics</h3>
+          <p>
+            My areas of specialisation include public finance, corporate taxation, national accounts and
+            macroeconomics. I take part in costing exercises, spending reviews and assessments of the
+            economic effects of reforms, working closely with economists, statisticians and policy teams.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------- Experience -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <header class="section__head reveal">
+        <span class="eyebrow">Career</span>
+        <h2 class="section__title" id="experience-title">Experience &amp; education</h2>
+      </header>
+
+      <h3 class="block-title reveal">Experience</h3>
+      <ol class="timeline reveal">
+        <li class="timeline__item">
+          <p class="timeline__period">2025 — Present</p>
+          <h4 class="timeline__role">Data Scientist</h4>
+          <span class="timeline__org">French Senate</span>
+          <p>
+            Quantitative support for the evaluation and oversight of government action — data analysis,
+            impact assessments, briefing notes — and contribution to legislative work through quantitative
+            analyses and simulations on economic, social and budgetary topics. The analyses feed into
+            parliamentary reports and support committees in their oversight and legislative work.
+          </p>
+        </li>
+
+        <li class="timeline__item">
+          <p class="timeline__period">2021 — 2025</p>
+          <h4 class="timeline__role">Data Scientist</h4>
+          <span class="timeline__org">General Inspectorate of Finance (IGF)</span>
+          <p>
+            Fraud detection (energy transition schemes, international trade), development of a rule engine
+            and a large price database built from open sources, and no-code tools for business teams.
+            Evaluation of the national healthcare strategy (health insurance data, microsimulation) and
+            development of Shiny applications for HR, mission tracking, GDPR compliance and an interactive
+            dashboard of government revenues, used in spending reviews and evaluation exercises.
+          </p>
+        </li>
+
+        <li class="timeline__item">
+          <p class="timeline__period">2018 — 2021</p>
+          <h4 class="timeline__role">Deputy Head — Corporate Taxes</h4>
+          <span class="timeline__org">French Treasury (Direction générale du Trésor)</span>
+          <p>
+            Corporate tax studies and impact assessments, with a major contribution to evaluations and
+            negotiations on the introduction of a global minimum tax promoted by the OECD (BEPS project).
+            Modernisation and automation of the production of general government accounts, improving the
+            timeliness, consistency and reproducibility of the figures used for policy and budget discussions.
+          </p>
+        </li>
+
+        <li class="timeline__item">
+          <p class="timeline__period">2015 — 2018</p>
+          <h4 class="timeline__role">Estimation of investment and taxation</h4>
+          <span class="timeline__org">Insee</span>
+          <p>
+            Produced quarterly statistics on investment and taxes using econometric models and short-term
+            indicators. Responsible for tax forecasts and for monitoring economic trends for Insee's
+            economic outlook, in close coordination with national accounts and forecasting teams.
+          </p>
+        </li>
+      </ol>
+
+      <h3 class="block-title block-title--spaced reveal">Education</h3>
+      <ol class="timeline reveal">
+        <li class="timeline__item">
+          <p class="timeline__period">2019</p>
+          <h4 class="timeline__role">Master's degree, Evaluation and Public Decisions</h4>
+          <span class="timeline__org">University of Rennes</span>
+          <p>
+            Expertise in assessing public policies and making data-driven decisions to support strategic
+            planning, spending reviews and governance in the public sector.
+          </p>
+        </li>
+
+        <li class="timeline__item">
+          <p class="timeline__period">2013 — 2015</p>
+          <h4 class="timeline__role">Insee statistician</h4>
+          <span class="timeline__org">ENSAI — National School for Statistics and Information Analysis</span>
+          <p>
+            Training in statistical modelling, quantitative economics, national accounts and computer
+            science for public statistics and public policy analysis.
+          </p>
+        </li>
+
+        <li class="timeline__item">
+          <p class="timeline__period">2011 — 2013</p>
+          <h4 class="timeline__role">Preparatory classes MPSI / MP</h4>
+          <span class="timeline__org" lang="fr">Lycée Alphonse Daudet, Nîmes</span>
+          <p>
+            Preparation for the competitive entrance examinations to French engineering and graduate schools
+            (mathematics and physics).
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ----------------------------------------------------------- Skills -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <header class="section__head reveal">
+        <span class="eyebrow">Toolbox</span>
+        <h2 class="section__title" id="skills-title">Skills</h2>
+        <p class="section__lede">
+          Self-assessed proficiency, shown as stated levels rather than arbitrary percentages.
+        </p>
+      </header>
+
+      <div class="skillset reveal">
+        <h3 class="block-title">Languages &amp; tools</h3>
+        <ul class="skills">
+          <li class="skill"><span class="skill__name">R</span><span class="skill__meta">Advanced</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li class="skill"><span class="skill__name">R Shiny</span><span class="skill__meta">Expert</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
+          <li class="skill"><span class="skill__name">Python</span><span class="skill__meta">Intermediate / advanced</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li class="skill"><span class="skill__name">SQL</span><span class="skill__meta">Intermediate</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li class="skill"><span class="skill__name">SAS</span><span class="skill__meta">Intermediate</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li class="skill"><span class="skill__name">HTML / JS (React)</span><span class="skill__meta">Intermediate</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li class="skill"><span class="skill__name">Git / Docker / Kubernetes</span><span class="skill__meta">Intermediate</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+        </ul>
+      </div>
+
+      <div class="skillset reveal">
+        <h3 class="block-title">Domain expertise</h3>
+        <ul class="skills">
+          <li class="skill"><span class="skill__name">Fraud detection</span><span class="skill__meta">Advanced — rules &amp; models</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li class="skill"><span class="skill__name">Public policy evaluation</span><span class="skill__meta">Advanced</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li class="skill"><span class="skill__name">Corporate taxation</span><span class="skill__meta">Advanced</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li class="skill"><span class="skill__name">Social engineering</span><span class="skill__meta">Advanced — human risk awareness</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+          <li class="skill"><span class="skill__name">OSINT</span><span class="skill__meta">Intermediate — open-source investigation</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+          <li class="skill"><span class="skill__name">Cybersecurity</span><span class="skill__meta">Intermediate — exposure &amp; awareness</span><span class="skill__level" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+        </ul>
+      </div>
+
+      <div class="skillset reveal">
+        <h3 class="block-title">Ways of working</h3>
+        <ul class="tags">
+          <li class="chip">Critical thinking</li>
+          <li class="chip">Cross-disciplinary thinking</li>
+          <li class="chip">Problem-solving</li>
+          <li class="chip">Adversarial thinking</li>
+          <li class="chip">Persuasion</li>
+          <li class="chip">Resilience</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------- Projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <header class="section__head reveal">
+        <span class="eyebrow">Portfolio</span>
+        <h2 class="section__title" id="projects-title">Projects</h2>
+        <p class="section__lede">
+          Personal R Shiny applications built on public data sources, outside of my institutional work.
+        </p>
+      </header>
+
+      <div class="grid grid--2">
+        <article class="card project reveal">
+          <div class="project__top">
+            <span class="project__icon"><svg aria-hidden="true"><use href="#i-book"></use></svg></span>
+            <span class="project__cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span>
+          </div>
+          <h3><a href="https://l023aq.shinyapps.io/thesesfr/" target="_blank" rel="noopener" aria-describedby="newtab">ThesisR</a></h3>
+          <p>
+            Interactive analysis of theses defended in France since 1985 — fields, institutions, dynamics
+            over time. Exploratory work on signals and profiles by field, based on public data sources,
+            designed to illustrate how large textual and bibliographic datasets can support strategic analysis.
+          </p>
+          <ul class="project__tags"><li>R</li><li>Shiny</li><li>Open data</li></ul>
+        </article>
+
+        <article class="card project reveal" data-reveal-delay="70">
+          <div class="project__top">
+            <span class="project__icon"><svg aria-hidden="true"><use href="#i-users"></use></svg></span>
+            <span class="project__cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span>
+          </div>
+          <h3><a href="https://l023aq.shinyapps.io/minintCIR/" target="_blank" rel="noopener" aria-describedby="newtab">CIR explorer</a></h3>
+          <p>
+            Visualisation of the main characteristics of Republican integration contracts
+            (<span lang="fr">contrats d'intégration républicaine</span>), to support the analysis of
+            trajectories and of policies related to integration.
+          </p>
+          <ul class="project__tags"><li>R</li><li>Shiny</li><li>Public data</li></ul>
+        </article>
+
+        <article class="card project reveal" data-reveal-delay="140">
+          <div class="project__top">
+            <span class="project__icon"><svg aria-hidden="true"><use href="#i-message"></use></svg></span>
+            <span class="project__cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span>
+          </div>
+          <h3><a href="https://l023aq.shinyapps.io/shinySignalConso/" target="_blank" rel="noopener" aria-describedby="newtab">Consumer report explorer</a></h3>
+          <p>
+            Exploration of consumer reports submitted through the SignalConso platform, with filters and
+            visualisations designed to help identify recurring issues and patterns.
+          </p>
+          <ul class="project__tags"><li>R</li><li>Shiny</li><li>Consumer protection</li></ul>
+        </article>
+
+        <article class="card project reveal" data-reveal-delay="210">
+          <div class="project__top">
+            <span class="project__icon"><svg aria-hidden="true"><use href="#i-shield"></use></svg></span>
+            <span class="project__cue"><svg aria-hidden="true"><use href="#i-mail"></use></svg></span>
+          </div>
+          <h3><a href="mailto:philippe.fontaine.ds@proton.me?subject=Access%20request%20%E2%80%94%20VulnGovTracker">VulnGovTracker</a></h3>
+          <p>
+            <strong>Access on request.</strong> Monitoring of public agents' exposure to known data breaches
+            and e-mail leaks using the Have I Been Pwned dataset, to support awareness-raising and the
+            reduction of cybersecurity risks in public organisations.
+          </p>
+          <ul class="project__tags"><li>R</li><li>Shiny</li><li>Cybersecurity</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------- Publications -->
+    <section class="section" id="publications" aria-labelledby="publications-title">
+      <header class="section__head reveal">
+        <span class="eyebrow">Selected work</span>
+        <h2 class="section__title" id="publications-title">Publications</h2>
+        <p class="section__lede">
+          Public reports I contributed to, published by the French Senate, the General Inspectorate of
+          Finance and partner institutions.
+        </p>
+      </header>
+
+      <div class="grid grid--2">
+        <div class="reveal">
+          <h3 class="block-title">Reports for the French Senate</h3>
+          <ul class="pubs">
+            <li><a href="https://www.senat.fr/notice-rapport/2025/r25-002-notice.html" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2025</span><span>Additional construction costs linked to regulatory standards</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.senat.fr/rapports-2025.html" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2025</span><span>Enforcing sentences: 20 proposals to improve enforcement and give meaning to criminal sanctions</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.senat.fr/notice-rapport/2024/r24-808-1-notice.html" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2025</span><span>Transparency and evaluation of state aid to businesses: a democratic demand and a key to economic efficiency</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.senat.fr/notice-rapport/2024/r24-814-notice.html" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2025</span><span>Changes in the financing of efforts to combat violence against women</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.senat.fr/notice-rapport/2024/r24-787-notice.html" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2025</span><span>Mental health and psychiatry: no “great national cause” without substantial resources</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.senat.fr/notice-rapport/2024/r24-671-notice.html" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2025</span><span>25 proposals to give municipal police the tools to tackle everyday insecurity</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.senat.fr/notice-rapport/2024/r24-616-notice.html" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2025</span><span>Employment of older workers: a key to safeguarding the pay-as-you-go pension system?</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.senat.fr/notice-rapport/2024/r24-514-notice.html" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2025</span><span>Tackling the high cost of living in the overseas territories: sticking plasters or real remedies?</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+          </ul>
+        </div>
+
+        <div class="reveal" data-reveal-delay="90">
+          <h3 class="block-title">Other reports (IGF and partners)</h3>
+          <ul class="pubs">
+            <li><a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports%20de%20mission/2024/Revue%20de%20d%C3%A9penses%20Dispositif%20affections%20de%20longue%20dur%C3%A9e%20-.pdf" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2024</span><span>Spending review on long-term conditions: towards a more efficient and equitable scheme</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports%20de%20mission/2023/Rapport_CVAE_Version%20Internet" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2023</span><span>Territorial allocation of the compensation for the CVAE (value-added contribution of businesses)</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports%20de%20mission/2024/Rapport_methodo_intervention_publique_Version%20Web.pdf" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2023</span><span>Cross-cutting methodological mission on the State's fields of intervention and public policy instruments</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports%20de%20mission/2022/Rapport_scolarisation_eleves_situation_handicap.pdf" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2022</span><span>Schooling of pupils with disabilities</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports%20de%20mission/2022/2022-M-012-06_Rapport_definitif_ORPEA.pdf" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2022</span><span>Mission on the management of nursing homes (EHPAD) in the Orpea group</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.igf.finances.gouv.fr/files/live/sites/igf/files/contributed/Rapports%20de%20mission/2021/FS-oct-2021-RAPPORT-COEURE-RELANCE.pdf" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2021</span><span>Evaluation committee for the France Relance recovery plan</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/fs-2021-rapport-isf-14octobre-10h-couv-final.pdf" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2021</span><span>Evaluation committee for the reforms of capital taxation</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+            <li><a href="https://www.ccomptes.fr/system/files/2020-10/20201014-rapport-particulier4-CPO-fiscalite-entreprises.pdf" target="_blank" rel="noopener" aria-describedby="newtab"><span class="year">2020</span><span>New rules for the international taxation of corporations: assessment of the economic effects for France</span><span class="cue"><svg aria-hidden="true"><use href="#i-external"></use></svg></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------- Contact -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-card reveal">
+        <div>
+          <span class="eyebrow">Contact</span>
+          <h2 id="contact-title">Let's talk about data and public policy</h2>
+          <p>
+            I am open to discussing evaluation, fraud detection and public finance projects — in evaluation
+            units, financial and economic directorates, audit and inspection bodies, regulatory authorities
+            or parliamentary institutions.
+          </p>
+        </div>
+
+        <ul class="contact-list">
+          <li><a href="mailto:philippe.fontaine.ds@proton.me"><svg aria-hidden="true"><use href="#i-mail"></use></svg>philippe.fontaine.ds@proton.me</a></li>
+          <li><a href="https://fr.linkedin.com/in/philippe-fontaine-ds" target="_blank" rel="me noopener" aria-describedby="newtab"><svg aria-hidden="true"><use href="#i-linkedin"></use></svg>linkedin.com/in/philippe-fontaine-ds</a></li>
+          <li><a href="https://github.com/pds023" target="_blank" rel="me noopener" aria-describedby="newtab"><svg aria-hidden="true"><use href="#i-github"></use></svg>github.com/pds023</a></li>
+          <li><span><svg aria-hidden="true"><use href="#i-pin"></use></svg>Paris, France</span></li>
+        </ul>
+
+        <div class="profile__actions profile__actions--start">
+          <a class="btn btn--primary" href="img/resume/cv_public.pdf" download>
+            <svg aria-hidden="true"><use href="#i-download"></use></svg>
+            Download CV (PDF)
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> Philippe Fontaine. All rights reserved.</p>
+      <p><a href="index-fr.html" hreflang="fr" lang="fr">Version française</a></p>
+    </footer>
+
+  </main>
+</div>
+
+<button class="to-top" type="button">
+  <svg aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+  <span class="visually-hidden">Back to top</span>
+</button>
+
+<script src="js/site.js" defer></script>
+</body>
 </html>

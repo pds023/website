@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found — Philippe Fontaine</title>
+<meta name="description" content="This page does not exist on philippefontaine.eu.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0b0f14">
+<meta name="color-scheme" content="dark light">
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+<link rel="preload" href="/fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-serif-4-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+
+<script>
+(function () {
+  var d = document.documentElement, t;
+  d.classList.add('js');
+  try { t = localStorage.getItem('pf-theme'); } catch (e) {}
+  if (t !== 'light' && t !== 'dark') {
+    t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+  d.setAttribute('data-theme', t);
+})();
+</script>
+
+<style>
+  .error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 100svh;
+    padding: var(--gutter);
+    text-align: center;
+  }
+  .error-page .code {
+    font-family: var(--font-serif);
+    font-size: clamp(4rem, 18vw, 8rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--accent);
+  }
+  .error-page p { max-width: 42ch; color: var(--text-muted); }
+  .error-page .actions { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; margin-top: .75rem; }
+</style>
+</head>
+
+<body>
+<main class="error-page">
+  <p class="code">404</p>
+  <h1>This page does not exist</h1>
+  <p>
+    The address you followed does not match any page on this site. It may have been moved or mistyped.
+  </p>
+  <div class="actions">
+    <a class="btn btn--primary" href="/">Back to the home page</a>
+    <a class="btn btn--ghost" href="/index-fr.html" hreflang="fr" lang="fr">Version française</a>
+  </div>
+</main>
+</body>
+</html>
