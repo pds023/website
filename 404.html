@@ -19,7 +19,6 @@
 <script>
 (function () {
   var d = document.documentElement, t;
-  d.classList.add('js');
   try { t = localStorage.getItem('pf-theme'); } catch (e) {}
   if (t !== 'light' && t !== 'dark') {
     t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';

@@ -133,83 +133,65 @@
     });
   }
 
+  function syncLayout() {
+    activeId = null;
+    syncScrollPadding();
+    onScroll();
+  }
+
   on(window, 'scroll', onScroll, { passive: true });
-  on(window, 'resize', function () { syncScrollPadding(); onScroll(); });
+  on(window, 'resize', syncLayout);
+  if (document.fonts) document.fonts.ready.then(syncLayout);
 
   syncScrollPadding();
   syncActive();
   syncToTop();
 
-  /* --------------------------------------------------------- reveal on scroll */
+  /* ------------------------------------------------------------- deep links */
 
-  var revealables = $$('.reveal');
-
-  if (!('IntersectionObserver' in window) || reduceMotion.matches) {
-    revealables.forEach(function (el) { el.classList.add('is-visible'); });
-  } else {
-    var revealObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var el = entry.target;
-        var delay = Number(el.dataset.revealDelay || 0);
-        setTimeout(function () { el.classList.add('is-visible'); }, delay);
-        revealObserver.unobserve(el);
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-
-    revealables.forEach(function (el) { revealObserver.observe(el); });
-  }
-
-  /* ------------------------------------------------------------- counters */
-
-  var countersFrozen = false;
-
-  function runCounter(el) {
-    var target = Number(el.dataset.count);
-    var suffix = el.dataset.suffix || '';
-    if (!isFinite(target)) return;
-
-    if (reduceMotion.matches || countersFrozen) { el.textContent = target + suffix; return; }
-
-    var duration = 1400;
-    var start = null;
-
-    function frame(now) {
-      if (countersFrozen) { el.textContent = target + suffix; return; }
-      if (start === null) start = now;
-      var p = Math.min((now - start) / duration, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(eased * target) + suffix;
-      if (p < 1) requestAnimationFrame(frame);
-    }
-
-    requestAnimationFrame(frame);
-  }
-
-  var counters = $$('[data-count]');
-
-  if (counters.length) {
-    if (!('IntersectionObserver' in window)) {
-      counters.forEach(runCounter);
-    } else {
-      var counterObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          runCounter(entry.target);
-          counterObserver.unobserve(entry.target);
-        });
-      }, { threshold: 0.4 });
-      counters.forEach(function (el) { counterObserver.observe(el); });
-    }
-  }
-
-  /* Printing must never capture a half-finished animation. */
-  on(window, 'beforeprint', function () {
-    countersFrozen = true;
-    revealables.forEach(function (el) { el.classList.add('is-visible'); });
-    counters.forEach(function (el) {
-      el.textContent = el.dataset.count + (el.dataset.suffix || '');
+  function syncHash() {
+    $$('a[hreflang]').forEach(function (link) {
+      if (link.origin === window.location.origin) link.hash = window.location.hash;
     });
+
+    var id;
+    try { id = decodeURIComponent(window.location.hash.slice(1)); }
+    catch (e) { return; }
+    var target = id && document.getElementById(id);
+    if (!target) return;
+
+    var details = target.closest('details');
+    while (details) {
+      details.open = true;
+      details = details.parentElement && details.parentElement.closest('details');
+    }
+
+    requestAnimationFrame(function () {
+      syncScrollPadding();
+      target.scrollIntoView({ block: 'start' });
+      onScroll();
+    });
+  }
+
+  $$('details').forEach(function (details) {
+    on(details, 'toggle', syncLayout);
+  });
+  on(window, 'hashchange', syncHash);
+  syncHash();
+
+  /* --------------------------------------------------------------- printing */
+
+  var printDetails = [];
+  on(window, 'beforeprint', function () {
+    $$('details:not([open])').forEach(function (details) {
+      printDetails.push(details);
+      details.open = true;
+    });
+  });
+  on(window, 'afterprint', function () {
+    printDetails.forEach(function (details) { details.open = false; });
+    printDetails = [];
+    syncLayout();
   });
 
   /* ------------------------------------------------------------------ misc */
