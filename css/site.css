@@ -188,16 +188,13 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
 .project--live { border-top: 2px solid var(--accent); }
 .project--live:nth-child(2) { border-top-color: #6a9dc7; }
 .project__top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem; width: 100%; margin-bottom: 1.15rem; }
-.project__technology, .project__status { font-size: .6875rem; color: var(--text-subtle); }
-.project__status { padding: .15rem .5rem; border: 1px solid var(--border); border-radius: 4px; }
 .project h3 { font-size: 1.5rem; margin-bottom: .65rem; letter-spacing: -.02em; }
 .project p { font-size: var(--step--1); color: var(--text-muted); }
-.project__link { display: inline-flex; gap: .65rem; align-items: center; min-height: 44px; margin-top: auto; padding-top: 1.25rem; font-size: var(--step--1); font-weight: 600; text-decoration: none; color: var(--accent-strong); }
+.project__actions { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.25rem; margin-top: auto; padding-top: 1.25rem; }
+.project__link { display: inline-flex; gap: .65rem; align-items: center; min-height: 44px; font-size: var(--step--1); font-weight: 600; text-decoration: none; color: var(--accent-strong); }
 .project__link:hover { text-decoration: underline; }
 .project__link svg { width: .9rem; height: .9rem; flex: none; }
-.project--compact { background: transparent; }
-.project--compact h3 { font-size: 1.25rem; }
-.project--compact .project__link { margin-top: .75rem; }
+.project__source { display: inline-flex; align-items: center; min-height: 44px; font-size: .75rem; color: var(--text-muted); }
 .publications { margin-top: 3rem; }
 .publications .section__title { font-size: 1.5rem; }
 .publications .section__lede { font-size: var(--step--1); }
